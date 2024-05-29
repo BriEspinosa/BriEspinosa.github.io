@@ -675,16 +675,16 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       <div class="w3-right" onclick="plusThesisDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-grey"></i></div>
     
       <div class="w3-center">
-<span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(1)"></span>
-<span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(2)"></span>
-<span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(3)"></span>
-<span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(4)"></span>
-<span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(5)"></span>
-<span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(6)"></span>
-<span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(7)"></span>
-<span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(8)"></span>
-<span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(9)"></span>
-<span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(10)"></span>
+<span class="w3-tag demodotsThesis w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(1)"></span>
+<span class="w3-tag demodotsThesis w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(2)"></span>
+<span class="w3-tag demodotsThesis w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(3)"></span>
+<span class="w3-tag demodotsThesis w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(4)"></span>
+<span class="w3-tag demodotsThesis w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(5)"></span>
+<span class="w3-tag demodotsThesis w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(6)"></span>
+<span class="w3-tag demodotsThesis w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(7)"></span>
+<span class="w3-tag demodotsThesis w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(8)"></span>
+<span class="w3-tag demodotsThesis w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(9)"></span>
+<span class="w3-tag demodotsThesis w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(10)"></span>
 <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(11)"></span>
 <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(12)"></span>
 <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(13)"></span>
@@ -827,7 +827,7 @@ function showDivs(n) {
 function showThesisDivs(n) {
   var i;
   var x = document.getElementsByClassName("myThesisSlides");
-  var dots = document.getElementsByClassName("demodots");
+  var dots = document.getElementsByClassName("demodotsThesis");
   if (n > x.length) {slideThesisIndex = 1}    
   if (n < 1) {slideThesisIndex = x.length} ;
   for (i = 0; i < x.length; i++) {
