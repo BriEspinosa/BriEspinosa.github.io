@@ -117,49 +117,49 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
    
  <!-- Slideshow -->
   <div class="w3-container">
-    <div class="w3-display-container myPersoanlPictureSlides">
+    <div class="w3-display-container myPersonalPicturesSlides">
       <img src="https://BriEspinosa.github.io/Wedding.jpg" style="width:100%">
 	<p>Getting to experience a friends big wedding day event!</p>
       <div class="w3-display-topleft w3-container w3-padding-32">
         
       </div>
     </div>
-    <div class="w3-display-container myPersoanlPictureSlides">
+    <div class="w3-display-container myPersonalPicturesSlides">
       <img src="https://BriEspinosa.github.io/Washington DC.jpg" style="width:100%">
 <p>Exploring Washington DC and seeing the cherry blossoms bloom.</p>
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container myPersoanlPictureSlides">
+<div class="w3-display-container myPersonalPicturesSlides">
       <img src="https://BriEspinosa.github.io/Open House.jpg" style="width:100%">
  <p>Modeling next to my model at the USF open house!</p>
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container myPersoanlPictureSlides">
+<div class="w3-display-container myPersonalPicturesSlides">
       <img src="https://BriEspinosa.github.io/Graduation.jpg" style="width:100%">
 <p>Graduating with close friends!</p>
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container myPersoanlPictureSlides">
+<div class="w3-display-container myPersonalPicturesSlides">
       <img src="https://BriEspinosa.github.io/Adventure.jpg" style="width:100%">
 <p>Experiencing new adventures!</p>
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container myPersoanlPictureSlides">
+<div class="w3-display-container myPersonalPicturesSlides">
       <img src="https://BriEspinosa.github.io/Bee Extraction Example.jpg" style="width:100%">
  <p>Extracting a feral beehive inside a water meter.</p>
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container myPersoanlPictureSlides">
+<div class="w3-display-container myPersonalPicturesSlides">
       <img src="https://BriEspinosa.github.io/Bee Frame.jpg" style="width:100%">
  <p>A beehive frame that contains workers and honeycomb extraced from the feral beehive.</p>
       <div class="w3-display-middle w3-container w3-padding-32">
@@ -168,17 +168,17 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     </div>
 
    <div class="w3-container w3-green  w3-xlarge">
-      <div class="w3-left" onclick="minusPersoanlPictureDivs(1)"><i class="fa fa-arrow-circle-left w3-hover-text-grey"></i></div>
-      <div class="w3-right" onclick="plusPersoanlPictureDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-grey"></i></div>
+      <div class="w3-left" onclick="minusPersonalPicturesDivs(1)"><i class="fa fa-arrow-circle-left w3-hover-text-grey"></i></div>
+      <div class="w3-right" onclick="plusPersonalPicturesDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-grey"></i></div>
     
       <div class="w3-center">
-<span class="w3-tag demodotsPersoanlPicture w3-border w3-transparent w3-hover-white" onclick="currentPersoanlPictureDiv(1)"></span>
-<span class="w3-tag demodotsPersoanlPicture w3-border w3-transparent w3-hover-white" onclick="currentPersoanlPictureDiv(2)"></span>
-<span class="w3-tag demodotsPersoanlPicture w3-border w3-transparent w3-hover-white" onclick="currentPersoanlPictureDiv(3)"></span>
-<span class="w3-tag demodotsPersoanlPicture w3-border w3-transparent w3-hover-white" onclick="currentPersoanlPictureDiv(4)"></span>
-<span class="w3-tag demodotsPersoanlPicture w3-border w3-transparent w3-hover-white" onclick="currentPersoanlPictureDiv(5)"></span>
-<span class="w3-tag demodotsPersoanlPicture w3-border w3-transparent w3-hover-white" onclick="currentPersoanlPictureDiv(6)"></span>
-<span class="w3-tag demodotsPersoanlPicture w3-border w3-transparent w3-hover-white" onclick="currentPersoanlPictureDiv(7)"></span>
+<span class="w3-tag demodotsPersonalPictures w3-border w3-transparent w3-hover-white" onclick="currentPersonalPicturesDiv(1)"></span>
+<span class="w3-tag demodotsPersonalPictures w3-border w3-transparent w3-hover-white" onclick="currentPersonalPicturesDiv(2)"></span>
+<span class="w3-tag demodotsPersonalPictures w3-border w3-transparent w3-hover-white" onclick="currentPersonalPicturesDiv(3)"></span>
+<span class="w3-tag demodotsPersonalPictures w3-border w3-transparent w3-hover-white" onclick="currentPersonalPictureseDiv(4)"></span>
+<span class="w3-tag demodotsPersonalPictures w3-border w3-transparent w3-hover-white" onclick="currentPersonalPicturesDiv(5)"></span>
+<span class="w3-tag demodotsPersonalPictures w3-border w3-transparent w3-hover-white" onclick="currentPersonalPicturesDiv(6)"></span>
+<span class="w3-tag demodotsPersonalPictures w3-border w3-transparent w3-hover-white" onclick="currentPersonalPicturesDiv(7)"></span>
 
       </div>
     </div>
@@ -854,6 +854,39 @@ function minusThesisDivs(n) {
 
 function currentThesisDiv(n) {
   showThesisDivs(slideThesisIndex = n);
+}
+
+
+
+var slidePersonalPicturesIndex = 1;
+showPersonalPicturesDivs(slidePersonalPicturesIndex);
+
+function plusPersonalPicturesDivs(n) {
+  showPersonalPicturesDivs(slidePersonalPicturesIndex += n);
+}
+
+function minusPersonalPicturesDivs(n) {
+  showPersonalPicturesDivs(slidePersonalPicturesIndex -= n);
+}
+
+function currentPersonalPicturesDiv(n) {
+  showPersonalPicturesDivs(slidePersonalPicturesIndex = n);
+}
+
+function showPersonalPicturesDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("myPersonalPicturesSlides");
+  var dots = document.getElementsByClassName("demodotsPersonalPictures");
+  if (n > x.length) {slidePersonalPicturesIndex = 1}    
+  if (n < 1) {slidePersonalPicturesIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
 }
 
 
