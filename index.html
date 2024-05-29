@@ -429,103 +429,103 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
    
  <!-- Slideshow -->
   <div class="w3-container">
-    <div class="w3-display-container mySlides">
+    <div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work.jpg" style="width:100%">
       <div class="w3-display-topleft w3-container w3-padding-32">
         
       </div>
     </div>
-    <div class="w3-display-container mySlides">
+    <div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work2.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container mySlides">
+<div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work3.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container mySlides">
+<div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work4.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container mySlides">
+<div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work5.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container mySlides">
+<div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work6.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container mySlides">
+<div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work7.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container mySlides">
+<div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work8.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container mySlides">
+<div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work9.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container mySlides">
+<div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work10.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container mySlides">
+<div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work11.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container mySlides">
+<div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work12.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container mySlides">
+<div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work13.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container mySlides">
+<div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work14.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container mySlides">
+<div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work15.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container mySlides">
+<div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work16.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
       </div>
     </div>
-<div class="w3-display-container mySlides">
+<div class="w3-display-container myThesisSlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work17.jpg" style="width:100%">
       <div class="w3-display-middle w3-container w3-padding-32">
        
@@ -633,6 +633,24 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " w3-white";
 }
+
+function showThesisDivs(n) {
+  var j;
+  var a = document.getElementsByClassName("myThesisSlides");
+  var b = document.getElementsByClassName("demodots");
+  if (n > a.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = a.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (j = 0; j < dots.length; i++) {
+    dots[i].className = b[i].className.replace(" w3-white", "");
+  }
+  a[slideIndex-1].style.display = "block";  
+  b[slideIndex-1].className += " w3-white";
+}
+
+
 </script>
 
 
