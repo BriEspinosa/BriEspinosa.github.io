@@ -878,19 +878,19 @@ function showDivs(n) {
 }
 
 function showThesisDivs(n) {
-  var j;
-  var a = document.getElementsByClassName("myThesisSlides");
-  var b = document.getElementsByClassName("demodots");
-  if (n > a.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = a.length} ;
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demodots");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
   }
-  for (j = 0; j < dots.length; i++) {
-    dots[i].className = b[i].className.replace(" w3-white", "");
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
   }
-  a[slideIndex-1].style.display = "block";  
-  b[slideIndex-1].className += " w3-white";
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
 }
 
 
