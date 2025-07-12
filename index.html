@@ -60,7 +60,7 @@
       margin: 0 8px;
     }
 
-    .w3-bar.w3-white {
+    .w3-barbackground-color: #fef6e4 !important; {
       background: transparent !important;
       box-shadow: none !important;
     }
@@ -91,7 +91,7 @@
       border: 1px solid #666;
     }
 
-    .w3-tag.w3-dark.w3-white {
+    .w3-tag.w3-darkbackground-color: #fef6e4 !important; {
       background-color: #666 !important;
     }
 
@@ -113,7 +113,7 @@
   transition: background-color 0.3s ease;
 }
 
-.demodotsPersonal.w3-white, .demodots.w3-white, .demodotsThesis.w3-white {
+.demodotsPersonalbackground-color: #fef6e4 !important;, .demodotsbackground-color: #fef6e4 !important;, .demodotsThesisbackground-color: #fef6e4 !important; {
   background-color: white !important;
 }
 
@@ -131,12 +131,12 @@ body {
   color: #333;
 }
 
-.w3-white {
-  background-color: #fffdf9 !important;
+background-color: #fef6e4 !important; {
+  background-color: #fef6e4 !important;
 }
 
 .w3-card, .w3-card-4 {
-  background-color: #fffdf9 !important;
+  background-color: #fef6e4 !important;
 }
 
 .w3-container, .w3-bar, .w3-card {
@@ -158,8 +158,25 @@ body {
   border-color: #457b9d !important;
 }
 
-.w3-tag.w3-dark.w3-white {
+.w3-tag.w3-darkbackground-color: #fef6e4 !important; {
   background-color: #457b9d !important;
+}
+
+/* Smooth transitions for slideshow images */
+.myPersonalPicturesSlides,
+.mySlides,
+.myThesisSlides {
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.myPersonalPicturesSlides.active,
+.mySlides.active,
+.myThesisSlides.active {
+  opacity: 1;
+  position: relative;
 }
 </style>
 </head>
@@ -1157,11 +1174,27 @@ setInterval(function() {
     showPersonalPicturesDivs(slidePersonalPicturesIndex = n);
   }
 
+  
   function showPersonalPicturesDivs(n) {
     var i;
     var x = document.getElementsByClassName("myPersonalPicturesSlides");
     var dots = document.getElementsByClassName("demodotsPersonal");
     if (n > x.length) {slidePersonalPicturesIndex = 1}
+    if (n < 1) {slidePersonalPicturesIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].classList.remove("active");
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    if (x[slidePersonalPicturesIndex - 1]) {
+      x[slidePersonalPicturesIndex - 1].classList.add("active");
+    }
+    if (dots[slidePersonalPicturesIndex - 1]) {
+      dots[slidePersonalPicturesIndex - 1].className += " w3-white";
+    }
+  }
+
     if (n < 1) {slidePersonalPicturesIndex = x.length}
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "none";
