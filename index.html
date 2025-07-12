@@ -11,7 +11,6 @@
     html, body, h1, h2, h3, h4, h5, h6 {
       font-family: 'Lato', sans-serif;
       line-height: 1.6;
-      scroll-behavior: smooth;
     }
 
     /* Navbar Gradient - Blue */
@@ -20,13 +19,13 @@
       color: white;
     }
 
-    .w3-top .w3-bar .w3-bar-item.name-highlight {
-      color: black !important;
+    .w3-top .w3-bar .w3-bar-item {
+      color: black !important; /* Name set to black */
       font-weight: bold;
-      border: 2px solid lightgrey;
-      border-radius: 8px;
-      padding: 4px 8px;
-      background-color: white;
+    }
+
+    .w3-top .w3-bar .w3-bar-item:hover {
+      background-color: rgba(255,255,255,0.1);
     }
 
     h2, h5 {
@@ -44,8 +43,7 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       width: 100%;
-      max-height: 600px;
-      object-fit: contain;
+      height: auto;
     }
 
     .w3-container {
@@ -62,10 +60,6 @@
       margin: 0 8px;
     }
 
-    .fa {
-      color: inherit !important;
-    }
-
     .w3-bar.w3-white {
       background: transparent !important;
       box-shadow: none !important;
@@ -75,6 +69,11 @@
       background: none !important;
     }
 
+    .fa {
+      color: inherit !important;
+    }
+
+    /* Modern Slideshow Navigation Styling */
     .w3-slideshow-nav {
       background-color: #333 !important;
       color: white !important;
@@ -87,47 +86,18 @@
       background-color: #555 !important;
     }
 
-    .demodots {
-      height: 12px;
-      width: 12px;
-      display: inline-block;
-      margin: 4px;
-      background-color: transparent;
-      border: 2px solid #ccc;
+    .w3-tag.w3-dark {
+      background-color: #444 !important;
+      border: 1px solid #666;
     }
 
-    .w3-white.demodots {
-      background-color: #ccc !important;
-    }
-
-    .demodots:hover {
-      background-color: #888;
-    }
-
-    .navbar-links {
-      margin-left: 12px;
+    .w3-tag.w3-dark.w3-white {
+      background-color: #666 !important;
     }
   </style>
 </head>
 <body class="w3-dark-grey">
 
-
-
-
-<!-- Scrollable Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button name-highlight">Brian Angel <b>Espinosa</b></a>
-    <div class="w3-right w3-hide-small navbar-links">
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#ambitions" class="w3-bar-item w3-button">Ambitions</a>
-      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
-      <a href="#resume" class="w3-bar-item w3-button">Resume</a>
-      <a href="#portfolio" class="w3-bar-item w3-button">Portfolio</a>
-      <a href="#thesis" class="w3-bar-item w3-button">Thesis</a>
-    </div>
-  </div>
-</div>
 
 
 
@@ -1013,7 +983,7 @@
 <span class="w3-tag demodotsThesis w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(46)"></span>
 <span class="w3-tag demodotsThesis w3-border w3-transparent w3-hover-white" onclick="currentThesisDiv(47)"></span>
       </div>
-    </div>      -->
+    </div>
 
 
 
@@ -1031,7 +1001,7 @@
 
 <!-- FOOTER -->
 <footer class="w3-container w3-dark-grey w3-center w3-margin-top">
-  <a href="#" class="w3-button w3-gray w3-padding-medium w3-margin-bottom">
+  <a href="#" class="w3-button w3-blue w3-padding-medium w3-margin-bottom">
     <i class="fa fa-arrow-up w3-margin-right"></i>To the top
   </a>
   <p>Find me on social media!</p>
@@ -1046,30 +1016,6 @@
   </a>
 </footer>
 
-<script>
-  // Photo Library auto-slide
-  let photoSlideIndex = 0;
-  autoShowPersonalPictures();
-
-  function autoShowPersonalPictures() {
-    let i;
-    const slides = document.getElementsByClassName("myPersonalPicturesSlides");
-    const dots = document.getElementsByClassName("demodotsPersonal");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    photoSlideIndex++;
-    if (photoSlideIndex > slides.length) {photoSlideIndex = 1}
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" w3-white", "");
-    }
-    if (slides.length > 0) {
-      slides[photoSlideIndex - 1].style.display = "block";
-      dots[photoSlideIndex - 1].className += " w3-white";
-    }
-    setTimeout(autoShowPersonalPictures, 4000); // change image every 4 seconds
-  }
-</script>
 
 
 <script>
