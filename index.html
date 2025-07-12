@@ -192,6 +192,19 @@ body {
   background-color: #a8dadc !important;
   color: #0D47A1 !important;
 }
+
+/* Scaled and lighter arrow buttons */
+.w3-slideshow-nav, .w3-button.w3-transparent {
+  color: #0D47A1 !important;
+  font-size: 20px !important;
+  padding: 4px 8px !important;
+  background-color: transparent !important;
+}
+
+.w3-slideshow-nav:hover, .w3-button.w3-transparent:hover {
+  background-color: #d7f3f7 !important;
+  color: #0D47A1 !important;
+}
 </style>
 </head>
 <body class="w3-dark-grey">
@@ -347,12 +360,8 @@ body {
 
 <!-- Example modern slideshow footer buttons -->
 <div class="w3-container w3-xlarge w3-center" style="margin-top: 24px;">
-  <div class="w3-left w3-slideshow-nav" onclick="minusPersonalPicturesDivs(1)">
-    <i class="fa fa-arrow-circle-left"></i>
-  </div>
-  <div class="w3-right w3-slideshow-nav" onclick="plusPersonalPicturesDivs(1)">
-    <i class="fa fa-arrow-circle-right"></i>
-  </div>
+  
+  
   <div class="w3-center" style="margin-top: 12px;">
     <span class="w3-tag w3-dark w3-hover-white demodotsPersonal" onclick="currentPersonalPicturesDiv(1)"></span>
 <span class="w3-tag w3-dark w3-hover-white demodotsPersonal" onclick="currentPersonalPicturesDiv(2)"></span>
@@ -370,8 +379,8 @@ body {
 
 
 <!--   <div class="w3-container w3-green  w3-xlarge">
-      <div class="w3-left" onclick="minusPersonalPicturesDivs(1)"><i class="fa fa-arrow-circle-left w3-hover-text-grey"></i></div>
-      <div class="w3-right" onclick="plusPersonalPicturesDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-grey"></i></div>
+      
+      
     
       <div class="w3-center">
 <span class="w3-tag demodotsPersonal w3-border w3-transparent w3-hover-white" onclick="currentPersonalPicturesDiv(1)"></span>
@@ -1130,7 +1139,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Auto-transition every 4 seconds
 setInterval(function() {
   plusPersonalPicturesDivs(1);
-}, 4000);
+}, 8000);
 
   var slideIndex = 1;
   showDivs(slideIndex);
