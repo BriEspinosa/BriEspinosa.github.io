@@ -1,92 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brian Espinosa</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Lato">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    body {
-      font-family: "Roboto", sans-serif;
-      background-color: #1f1f1f;
-      color: #f1f1f1;
-    }
-    .navbar {
-      background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
-    }
-    .navbar-brand b {
-      font-weight: bold;
-      color: #fff;
-    }
-    .nav-link {
-      color: #e0e0e0 !important;
-    }
-    .nav-link:hover {
-      color: #ffffff !important;
-      text-decoration: underline;
-    }
-    .section-title {
-      margin-top: 2rem;
-      margin-bottom: 1.5rem;
-      border-bottom: 2px solid #4CAF50;
-      padding-bottom: 0.5rem;
-      font-weight: 600;
-      color: #4CAF50;
-    }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .skills-grid .skill {
-      background-color: #2c2c2c;
-      padding: 0.75rem;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: 500;
-      box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    }
-    .carousel-inner img {
-      border-radius: 10px;
-    }
-    .social-icons a {
-      margin: 0 15px;
-      color: #4CAF50;
-      font-size: 1.5rem;
-    }
-    .btn-success {
-      background-color: #4CAF50;
-      border: none;
-    }
-    .btn-success:hover {
-      background-color: #45a049;
-    }
-  </style>
-</head>
-<body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
-  <div class="container">
-    <a class="navbar-brand" href="#">Brian Angel <b>Espinosa</b></a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="https://BriEspinosa.github.io/Brian Espinosa Resume.pdf" download>Resume</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://BriEspinosa.github.io/Brian Espinosa Portfolio.pdf">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://BriEspinosa.github.io/Brian Espinosa Thesis Book.pdf" download>Thesis</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
 <!-- Main Content -->
 <div class="container py-5">
   <section>
     <h2 class="section-title">About Me</h2>
-    <p>I am currently working as an Architectural Designer at Zyscovich and am on the path to becoming a licensed architect. I enjoy hiking, traveling, and running, and I am a passionate sports fan and avid dog lover. Currently, I am also on a quest to explore new cuisines!</p>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p>I am currently working as an Architectural Designer at Zyscovich and am on the path to becoming a licensed architect. I enjoy hiking, traveling, and running, and I am a passionate sports fan and avid dog lover. Currently, I am also on a quest to explore new cuisines!</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="https://BriEspinosa.github.io/profile.jpg" alt="Brian Espinosa" class="img-fluid rounded shadow-sm">
+      </div>
+    </div>
   </section>
 
   <section>
@@ -130,6 +53,8 @@
 
   <section>
     <h2 class="section-title">Resume</h2>
+    <p>You can view or download my resume below:</p>
+    <a href="https://BriEspinosa.github.io/Brian Espinosa Resume.pdf" class="btn btn-outline-light mb-3" download>Download Resume (PDF)</a>
     <img src="https://BriEspinosa.github.io/Brian Espinosa Resume.jpg" class="img-fluid rounded shadow-sm" alt="Resume">
   </section>
 
@@ -154,23 +79,68 @@
         <span class="carousel-control-next-icon"></span>
       </button>
     </div>
-  </section>
-</div>
+  $1
 
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-4">
-  <div class="container">
-    <p class="mb-2">Find me on social media!</p>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/brian.d.espinosa"><i class="fa fa-facebook-official"></i></a>
-      <a href="https://www.instagram.com/brian_angel_espinosa/?hl=en"><i class="fa fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/brian-angel-espinosa"><i class="fa fa-linkedin"></i></a>
+  <section>
+    <h2 class="section-title">Thesis Gallery</h2>
+    <div id="thesisCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://BriEspinosa.github.io/Thesis1.jpg" class="d-block w-100" alt="Thesis Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="https://BriEspinosa.github.io/Thesis2.jpg" class="d-block w-100" alt="Thesis Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="https://BriEspinosa.github.io/Thesis3.jpg" class="d-block w-100" alt="Thesis Slide 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#thesisCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#thesisCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
-    <a href="#" class="btn btn-success mt-3">To the top <i class="fa fa-arrow-up"></i></a>
-  </div>
-</footer>
+  </section>
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+  <section>
+    <h2 class="section-title">Personal Photos</h2>
+    <div id="personalCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://BriEspinosa.github.io/Personal1.jpg" class="d-block w-100" alt="Personal Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="https://BriEspinosa.github.io/Personal2.jpg" class="d-block w-100" alt="Personal Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="https://BriEspinosa.github.io/Personal3.jpg" class="d-block w-100" alt="Personal Slide 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#personalCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#personalCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Contact Me</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="row g-3">
+      <div class="col-md-6">
+        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="col-md-6">
+        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+      </div>
+      <div class="col-12">
+        <textarea name="message" rows="5" class="form-control" placeholder="Your Message" required></textarea>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-success">Send Message</button>
+      </div>
+    </form>
+  </section>
