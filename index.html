@@ -205,13 +205,6 @@ body {
   background-color: #d7f3f7 !important;
   color: #0D47A1 !important;
 }
-
-@media only screen and (max-width: 600px) {
-  .photo-library-gap {
-    margin-bottom: 32px;
-    display: block;
-  }
-}
 </style>
 </head>
 <body class="w3-dark-grey">
@@ -230,16 +223,7 @@ body {
 	<a href="https://BriEspinosa.github.io/Brian Espinosa Resume.pdf"download class="w3-bar-item w3-button">Download Resume</a>      
 	<a href="https://BriEspinosa.github.io/Brian Espinosa Portfolio.pdf" class="w3-bar-item w3-button">Download Portfolio</a>
 	<a href="https://BriEspinosa.github.io/Brian Espinosa Thesis Book.pdf"download class="w3-bar-item w3-button">Download Masters Thesis Book</a>
-    
-<div class="w3-dropdown-click w3-right w3-hide-medium w3-hide-large">
-  <button onclick="toggleDownloads()" class="w3-bar-item w3-button">Downloads <i class="fa fa-caret-down"></i></button>
-  <div id="downloadDropdown" class="w3-dropdown-content w3-bar-block w3-card-4" style="display:none">
-    <a href="https://BriEspinosa.github.io/Brian Espinosa Resume.pdf" download class="w3-bar-item w3-button">Resume</a>
-    <a href="https://BriEspinosa.github.io/Brian Espinosa Portfolio.pdf" class="w3-bar-item w3-button">Portfolio</a>
-    <a href="https://BriEspinosa.github.io/Brian Espinosa Thesis Book.pdf" download class="w3-bar-item w3-button">Thesis Book</a>
-  </div>
-</div>
-
+    </div>
   </div>
 </div>
 
@@ -410,8 +394,6 @@ body {
    </div> -->
 
 </div>
-     <div class="photo-library-gap"></div>
-<div style="clear:both;"></div>
      <br>  
     </div>
     <!-- </div>
@@ -482,8 +464,10 @@ body {
 
     <!-- End Right Column -->
     </div>
-</div> <!-- End of w3-row-padding grid -->
-<!-- End Grid -->
+    
+    
+    
+  <!-- End Grid -->
   </div>
   
    
@@ -1273,16 +1257,6 @@ setInterval(function() {
     }
   }
 });
-
-function toggleDownloads() {
-  var x = document.getElementById("downloadDropdown");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
 </script>
 
 </body>
