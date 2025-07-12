@@ -20,12 +20,12 @@
     }
 
     .w3-top .w3-bar .w3-bar-item {
-      color: black !important;
+      color: black !important; /* Name set to black */
       font-weight: bold;
-      border: 2px solid black;
-      border-radius: 8px;
-      padding: 4px 8px;
-      background-color: white;
+    }
+
+    .w3-top .w3-bar .w3-bar-item:hover {
+      background-color: rgba(255,255,255,0.1);
     }
 
     h2, h5 {
@@ -43,8 +43,7 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       width: 100%;
-      max-height: 600px;
-      object-fit: contain;
+      height: auto;
     }
 
     .w3-container {
@@ -61,10 +60,6 @@
       margin: 0 8px;
     }
 
-    .fa {
-      color: inherit !important;
-    }
-
     .w3-bar.w3-white {
       background: transparent !important;
       box-shadow: none !important;
@@ -74,6 +69,11 @@
       background: none !important;
     }
 
+    .fa {
+      color: inherit !important;
+    }
+
+    /* Modern Slideshow Navigation Styling */
     .w3-slideshow-nav {
       background-color: #333 !important;
       color: white !important;
@@ -86,26 +86,18 @@
       background-color: #555 !important;
     }
 
-    .demodots {
-      height: 12px;
-      width: 12px;
-      border-radius: 50%;
-      display: inline-block;
-      margin: 4px;
-      background-color: #444;
+    .w3-tag.w3-dark {
+      background-color: #444 !important;
       border: 1px solid #666;
     }
 
-    .w3-white.demodots {
-      background-color: white !important;
-    }
-
-    .demodots:hover {
-      background-color: #888;
+    .w3-tag.w3-dark.w3-white {
+      background-color: #666 !important;
     }
   </style>
 </head>
 <body class="w3-dark-grey">
+
 
 
 
@@ -1009,7 +1001,7 @@
 
 <!-- FOOTER -->
 <footer class="w3-container w3-dark-grey w3-center w3-margin-top">
-  <a href="#" class="w3-button w3-gray w3-padding-medium w3-margin-bottom">
+  <a href="#" class="w3-button w3-blue w3-padding-medium w3-margin-bottom">
     <i class="fa fa-arrow-up w3-margin-right"></i>To the top
   </a>
   <p>Find me on social media!</p>
@@ -1023,7 +1015,6 @@
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </a>
 </footer>
-
 
 
 
