@@ -1,24 +1,69 @@
 <!DOCTYPE html>
 <html>
-<title>Brian Espinosa</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+  <title>Brian Espinosa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Lato:300,400,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html,body,h1,h2,h3,h4,h5,h6 {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.6;
+    }
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    /* Gradient Navbar */
+    .w3-top .w3-bar {
+      background: linear-gradient(to right, #4CAF50, #2E7D32);
+      color: white;
+    }
+    .w3-bar .w3-bar-item {
+      color: white;
+    }
 
+    .w3-bar .w3-bar-item:hover {
+      background-color: rgba(255,255,255,0.1);
+      color: #f1f1f1;
+    }
 
+    /* Refined Headers */
+    h2, h5 {
+      font-weight: 600;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 4px;
+    }
 
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-.mySlides {display:none}
-.w3-tag, .fa {cursor:pointer}
-.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
-</style>
+    /* Modern Card Shadow */
+    .w3-card, .w3-card-4 {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+      border-radius: 12px;
+    }
+
+    /* Smooth image corners and shadows */
+    img {
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    /* Section padding & cleaner layout */
+    .w3-container {
+      padding: 16px 24px;
+    }
+
+    /* Footer adjustments */
+    footer {
+      padding: 20px;
+      font-size: 16px;
+    }
+
+    footer i {
+      font-size: 24px !important;
+      margin: 0 8px;
+    }
+  </style>
+</head>
 <body class="w3-dark-grey">
-
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -770,14 +815,21 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
       </div>
 </div>
+<!-- FOOTER (already improved via CSS above) -->
 <footer class="w3-container w3-dark-grey w3-center w3-margin-top">
-  <a href="#" class="w3-button w3-green w3-padding-medium w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-</footer>
-<footer class="w3-container w3-dark-grey w3-center w3-margin-top">
+  <a href="#" class="w3-button w3-green w3-padding-medium w3-margin-bottom">
+    <i class="fa fa-arrow-up w3-margin-right"></i>To the top
+  </a>
   <p>Find me on social media!</p>
-  <a href="https://www.facebook.com/brian.d.espinosa"><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-text-green"></i></a>
-  <a href="https://www.instagram.com/brian_angel_espinosa/?hl=en"><i class="fa fa-instagram w3-hover-opacity w3-large w3-text-green"></i></a>
-  <a href="https://www.linkedin.com/in/brian-angel-espinosa"><i class="fa fa-linkedin w3-hover-opacity w3-large w3-text-green"></i></a>
+  <a href="https://www.facebook.com/brian.d.espinosa">
+    <i class="fa fa-facebook-official w3-hover-opacity w3-text-green"></i>
+  </a>
+  <a href="https://www.instagram.com/brian_angel_espinosa/?hl=en">
+    <i class="fa fa-instagram w3-hover-opacity w3-text-green"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/brian-angel-espinosa">
+    <i class="fa fa-linkedin w3-hover-opacity w3-text-green"></i>
+  </a>
 </footer>
 
 
