@@ -94,11 +94,11 @@
     .w3-tag.w3-dark.w3-white {
       background-color: #666 !important;
     }
- <!--
+
   .myPersonalPicturesSlides {
       display: none;
     }
--->
+
 
   </style>
 </head>
@@ -1028,108 +1028,119 @@
 
 
 
+
+
+
+
+
 <script>
-// Slideshow
-var slideIndex = 1;
-showDivs(slideIndex);
+document.addEventListener("DOMContentLoaded", function() {
+  var slideIndex = 1;
+  showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function minusDivs(n) {
-  showDivs(slideIndex -= n);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-
-var slideThesisIndex = 1;
-showThesisDivs(slideThesisIndex);
-
-function plusThesisDivs(n) {
-  showThesisDivs(slideThesisIndex += n);
-}
-
-function minusThesisDivs(n) {
-  showThesisDivs(slideThesisIndex -= n);
-}
-
-function currentThesisDiv(n) {
-  showThesisDivs(slideThesisIndex = n);
-}
-
-
-
-var slidePersonalPicturesIndex = 1;
-showPersonalPicturesDivs(slidePersonalPicturesIndex);
-
-function plusPersonalPicturesDivs(n) {
-  showPersonalPicturesDivs(slidePersonalPicturesIndex += n);
-}
-
-function minusPersonalPicturesDivs(n) {
-  showPersonalPicturesDivs(slidePersonalPicturesIndex -= n);
-}
-
-function currentPersonalPicturesDiv(n) {
-  showPersonalPicturesDivs(slidePersonalPicturesIndex = n);
-}
-
-function showPersonalPicturesDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("myPersonalPicturesSlides");
-  var dots = document.getElementsByClassName("demodotsPersonal");
-  if (n > x.length) {slidePersonalPicturesIndex = 1}    
-  if (n < 1) {slidePersonalPicturesIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slidePersonalPicturesIndex-1].style.display = "block";  
-  dots[slidePersonalPicturesIndex-1].className += " w3-white";
-}
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demodots");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+  function minusDivs(n) {
+    showDivs(slideIndex -= n);
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
 
-function showThesisDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("myThesisSlides");
-  var dots = document.getElementsByClassName("demodotsThesis");
-  if (n > x.length) {slideThesisIndex = 1}    
-  if (n < 1) {slideThesisIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+  function currentDiv(n) {
+    showDivs(slideIndex = n);
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
+
+  var slideThesisIndex = 1;
+  showThesisDivs(slideThesisIndex);
+
+  function plusThesisDivs(n) {
+    showThesisDivs(slideThesisIndex += n);
   }
-  x[slideThesisIndex-1].style.display = "block";  
-  dots[slideThesisIndex-1].className += " w3-white";
-}
 
+  function minusThesisDivs(n) {
+    showThesisDivs(slideThesisIndex -= n);
+  }
 
+  function currentThesisDiv(n) {
+    showThesisDivs(slideThesisIndex = n);
+  }
+
+  var slidePersonalPicturesIndex = 1;
+  showPersonalPicturesDivs(slidePersonalPicturesIndex);
+
+  window.plusPersonalPicturesDivs = function(n) {
+    showPersonalPicturesDivs(slidePersonalPicturesIndex += n);
+  }
+
+  window.minusPersonalPicturesDivs = function(n) {
+    showPersonalPicturesDivs(slidePersonalPicturesIndex -= n);
+  }
+
+  window.currentPersonalPicturesDiv = function(n) {
+    showPersonalPicturesDivs(slidePersonalPicturesIndex = n);
+  }
+
+  function showPersonalPicturesDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("myPersonalPicturesSlides");
+    var dots = document.getElementsByClassName("demodotsPersonal");
+    if (n > x.length) {slidePersonalPicturesIndex = 1}
+    if (n < 1) {slidePersonalPicturesIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    if (x[slidePersonalPicturesIndex-1]) {
+      x[slidePersonalPicturesIndex-1].style.display = "block";
+    }
+    if (dots[slidePersonalPicturesIndex-1]) {
+      dots[slidePersonalPicturesIndex-1].className += " w3-white";
+    }
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demodots");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    if (x[slideIndex-1]) {
+      x[slideIndex-1].style.display = "block";
+    }
+    if (dots[slideIndex-1]) {
+      dots[slideIndex-1].className += " w3-white";
+    }
+  }
+
+  function showThesisDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("myThesisSlides");
+    var dots = document.getElementsByClassName("demodotsThesis");
+    if (n > x.length) {slideThesisIndex = 1}
+    if (n < 1) {slideThesisIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    if (x[slideThesisIndex-1]) {
+      x[slideThesisIndex-1].style.display = "block";
+    }
+    if (dots[slideThesisIndex-1]) {
+      dots[slideThesisIndex-1].className += " w3-white";
+    }
+  }
+});
 </script>
-
-
 
 </body>
 </html>
