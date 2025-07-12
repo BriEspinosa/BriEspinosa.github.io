@@ -167,6 +167,31 @@ body {
   height: 300px;
   object-fit: cover;
 }
+
+.myPersonalPicturesSlides img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  background-color: #f8f8fa;
+}
+
+/* Responsive image height for mobile */
+@media only screen and (max-width: 600px) {
+  .myPersonalPicturesSlides img {
+    height: auto;
+    max-height: 60vh;
+  }
+}
+
+/* Blue arrows on slides */
+.w3-slideshow-nav, .w3-button.w3-transparent {
+  color: #0D47A1 !important;
+}
+
+.w3-slideshow-nav:hover, .w3-button.w3-transparent:hover {
+  background-color: #a8dadc !important;
+  color: #0D47A1 !important;
+}
 </style>
 </head>
 <body class="w3-dark-grey">
