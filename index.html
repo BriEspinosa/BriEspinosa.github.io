@@ -124,43 +124,6 @@
   border-radius: 4px;
   margin-left: 6px;
 }
-
-/* Pastel Theme Colors */
-body {
-  background-color: #f8f8fa !important;
-  color: #333;
-}
-
-.w3-white {
-  background-color: #fffdf9 !important;
-}
-
-.w3-card, .w3-card-4 {
-  background-color: #fffdf9 !important;
-}
-
-.w3-container, .w3-bar, .w3-card {
-  color: #333 !important;
-}
-
-.w3-top .w3-bar {
-  background: linear-gradient(to right, #a8dadc, #457b9d) !important;
-  color: #fff !important;
-}
-
-.w3-top .w3-bar .w3-bar-item {
-  color: #fff !important;
-  border-color: rgba(255,255,255,0.6) !important;
-}
-
-.w3-tag.w3-dark {
-  background-color: #a8dadc !important;
-  border-color: #457b9d !important;
-}
-
-.w3-tag.w3-dark.w3-white {
-  background-color: #457b9d !important;
-}
 </style>
 </head>
 <body class="w3-dark-grey">
@@ -440,7 +403,14 @@ body {
    
    
    
- <!-- Slideshow -->
+ 
+<!-- Portfolio Navigation -->
+<div class="w3-center w3-margin-bottom">
+  <button class="w3-button w3-border w3-round w3-light-grey" onclick="currentDiv(1)">Start</button>
+  <button class="w3-button w3-border w3-round w3-light-grey" onclick="minusDivs(1)">Previous</button>
+  <button class="w3-button w3-border w3-round w3-light-grey" onclick="plusDivs(1)">Next</button>
+</div>
+<!-- Slideshow -->
   <div class="w3-container">
     <div class="w3-display-container mySlides">
       <img src="https://BriEspinosa.github.io/Final Portfolio Work.jpg" style="width:100%">
@@ -1096,11 +1066,6 @@ body {
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-// Auto-transition every 4 seconds
-setInterval(function() {
-  plusPersonalPicturesDivs(1);
-}, 4000);
-
   var slideIndex = 1;
   showDivs(slideIndex);
 
@@ -1118,17 +1083,6 @@ setInterval(function() {
 
   var slideThesisIndex = 1;
   showThesisDivs(slideThesisIndex);
-  // Portfolio navigation functions
-  window.plusDivs = plusDivs;
-  window.minusDivs = minusDivs;
-  window.currentDiv = currentDiv;
-
-  // Thesis navigation functions
-  window.plusThesisDivs = plusThesisDivs;
-  window.minusThesisDivs = minusThesisDivs;
-  window.currentThesisDiv = currentThesisDiv;
-
-
 
   function plusThesisDivs(n) {
     showThesisDivs(slideThesisIndex += n);
