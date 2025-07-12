@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +14,7 @@
       line-height: 1.6;
     }
 
-    /* Navbar Gradient - Now Blue */
+    /* Navbar Gradient - Blue */
     .w3-top .w3-bar {
       background: linear-gradient(to right, #2196F3, #0D47A1);
       color: white;
@@ -44,12 +45,8 @@
     img {
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    /* Slideshow Adjustments */
-    .w3-display-container img {
-      max-height: 600px;
-      object-fit: cover;
+      width: 100%;
+      height: auto;
     }
 
     /* Container Padding */
@@ -68,12 +65,6 @@
       margin: 0 8px;
     }
 
-    /* Adjust color classes from green to blue */
-    .w3-text-green, .w3-hover-text-grey:hover, .w3-green {
-      color: #2196F3 !important;
-      background-color: #2196F3 !important;
-    }
-
     /* Fix white background behind name */
     .w3-bar.w3-white {
       background: transparent !important;
@@ -83,9 +74,27 @@
     .w3-bar .w3-bar-item {
       background: none !important;
     }
+
+    /* Restrict blue theme to buttons only */
+    .w3-button.w3-blue,
+    .w3-tag.w3-blue,
+    .w3-hover-blue:hover {
+      background-color: #2196F3 !important;
+      color: white !important;
+    }
+
+    /* Prevent global icon recoloring */
+    .fa {
+      color: inherit !important;
+    }
   </style>
 </head>
 <body class="w3-dark-grey">
+
+
+
+
+
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -839,19 +848,20 @@
 </div>
 
 
+<!-- FOOTER -->
 <footer class="w3-container w3-dark-grey w3-center w3-margin-top">
   <a href="#" class="w3-button w3-blue w3-padding-medium w3-margin-bottom">
     <i class="fa fa-arrow-up w3-margin-right"></i>To the top
   </a>
   <p>Find me on social media!</p>
   <a href="https://www.facebook.com/brian.d.espinosa">
-    <i class="fa fa-facebook-official w3-hover-opacity w3-text-blue"></i>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
   </a>
   <a href="https://www.instagram.com/brian_angel_espinosa/?hl=en">
-    <i class="fa fa-instagram w3-hover-opacity w3-text-blue"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
   </a>
   <a href="https://www.linkedin.com/in/brian-angel-espinosa">
-    <i class="fa fa-linkedin w3-hover-opacity w3-text-blue"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
   </a>
 </footer>
 
