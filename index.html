@@ -100,7 +100,31 @@
     }
 
 
-  </style>
+  
+/* Hollow demo dots */
+.demodotsPersonal, .demodots, .demodotsThesis {
+  border: 1px solid white;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 4px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.demodotsPersonal.w3-white, .demodots.w3-white, .demodotsThesis.w3-white {
+  background-color: white !important;
+}
+
+/* Navbar name and button border */
+.w3-top .w3-bar .w3-bar-item {
+  border: 1px solid rgba(255,255,255,0.6);
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+</style>
 </head>
 <body class="w3-dark-grey">
 
