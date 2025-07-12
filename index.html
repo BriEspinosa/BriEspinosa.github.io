@@ -94,116 +94,18 @@
     .w3-tag.w3-dark.w3-white {
       background-color: #666 !important;
     }
-
-  .myPersonalPicturesSlides {
-      display: none;
-    }
-
-
   
-/* Hollow demo dots */
-.demodotsPersonal, .demodots, .demodotsThesis {
-  border: 1px solid white;
-  width: 12px;
-  height: 12px;
-  display: inline-block;
-  border-radius: 50%;
-  margin: 0 4px;
-  background-color: transparent;
-  transition: background-color 0.3s ease;
+/* Ensure left column does not cover right column */
+.w3-half {
+  position: relative;
+  z-index: 1;
 }
 
-.demodotsPersonal.w3-white, .demodots.w3-white, .demodotsThesis.w3-white {
-  background-color: white !important;
-}
-
-/* Navbar name and button border */
-.w3-top .w3-bar .w3-bar-item {
-  border: 1px solid rgba(255,255,255,0.6);
-  padding: 6px 12px;
-  border-radius: 4px;
-  margin-left: 6px;
-}
-
-/* Pastel Theme Colors */
-body {
-  background-color: #f8f8fa !important;
-  color: #333;
-}
-
-.w3-white {
-  background-color: #fffdf9 !important;
-}
-
-.w3-card, .w3-card-4 {
-  background-color: #fffdf9 !important;
-}
-
-.w3-container, .w3-bar, .w3-card {
-  color: #333 !important;
-}
-
-.w3-top .w3-bar {
-  background: linear-gradient(to right, #a8dadc, #457b9d) !important;
-  color: #fff !important;
-}
-
-.w3-top .w3-bar .w3-bar-item {
-  color: #fff !important;
-  border-color: rgba(255,255,255,0.6) !important;
-}
-
-.w3-tag.w3-dark {
-  background-color: #a8dadc !important;
-  border-color: #457b9d !important;
-}
-
-.w3-tag.w3-dark.w3-white {
-  background-color: #457b9d !important;
-}
-
-.myPersonalPicturesSlides img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.myPersonalPicturesSlides img {
-  width: 100%;
-  height: 300px;
-  object-fit: contain;
-  background-color: #f8f8fa;
-}
-
-/* Responsive image height for mobile */
 @media only screen and (max-width: 600px) {
-  .myPersonalPicturesSlides img {
-    height: auto;
-    max-height: 60vh;
+  .w3-half {
+    width: 100% !important;
+    float: none !important;
   }
-}
-
-/* Blue arrows on slides */
-.w3-slideshow-nav, .w3-button.w3-transparent {
-  color: #0D47A1 !important;
-}
-
-.w3-slideshow-nav:hover, .w3-button.w3-transparent:hover {
-  background-color: #a8dadc !important;
-  color: #0D47A1 !important;
-}
-
-/* Scaled and lighter arrow buttons */
-.w3-slideshow-nav, .w3-button.w3-transparent {
-  color: #0D47A1 !important;
-  font-size: 20px !important;
-  padding: 4px 8px !important;
-  background-color: transparent !important;
-}
-
-.w3-slideshow-nav:hover, .w3-button.w3-transparent:hover {
-  background-color: #d7f3f7 !important;
-  color: #0D47A1 !important;
 }
 </style>
 </head>
@@ -223,16 +125,7 @@ body {
 	<a href="https://BriEspinosa.github.io/Brian Espinosa Resume.pdf"download class="w3-bar-item w3-button">Download Resume</a>      
 	<a href="https://BriEspinosa.github.io/Brian Espinosa Portfolio.pdf" class="w3-bar-item w3-button">Download Portfolio</a>
 	<a href="https://BriEspinosa.github.io/Brian Espinosa Thesis Book.pdf"download class="w3-bar-item w3-button">Download Masters Thesis Book</a>
-    
-<div class="w3-dropdown-click w3-hide-medium w3-hide-large w3-right">
-  <button onclick="toggleMobileDownloads()" class="w3-bar-item w3-button">Downloads <i class="fa fa-caret-down"></i></button>
-  <div id="mobileDownloadDropdown" class="w3-dropdown-content w3-bar-block w3-card-4" style="display:none">
-    <a href="https://BriEspinosa.github.io/Brian Espinosa Resume.pdf" download class="w3-bar-item w3-button">Resume</a>
-    <a href="https://BriEspinosa.github.io/Brian Espinosa Portfolio.pdf" class="w3-bar-item w3-button">Portfolio</a>
-    <a href="https://BriEspinosa.github.io/Brian Espinosa Thesis Book.pdf" download class="w3-bar-item w3-button">Thesis Book</a>
-  </div>
-</div>
-
+    </div>
   </div>
 </div>
 
@@ -369,16 +262,20 @@ body {
 
 <!-- Example modern slideshow footer buttons -->
 <div class="w3-container w3-xlarge w3-center" style="margin-top: 24px;">
-  
-  
+  <div class="w3-left w3-slideshow-nav" onclick="minusPersonalPicturesDivs(1)">
+    <i class="fa fa-arrow-circle-left"></i>
+  </div>
+  <div class="w3-right w3-slideshow-nav" onclick="plusPersonalPicturesDivs(1)">
+    <i class="fa fa-arrow-circle-right"></i>
+  </div>
   <div class="w3-center" style="margin-top: 12px;">
-    <span class="w3-tag w3-dark w3-hover-white demodotsPersonal" onclick="currentPersonalPicturesDiv(1)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsPersonal" onclick="currentPersonalPicturesDiv(2)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsPersonal" onclick="currentPersonalPicturesDiv(3)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsPersonal" onclick="currentPersonalPicturesDiv(4)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsPersonal" onclick="currentPersonalPicturesDiv(5)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsPersonal" onclick="currentPersonalPicturesDiv(6)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsPersonal" onclick="currentPersonalPicturesDiv(7)"></span>
+    <span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentPersonalPicturesDiv(1)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentPersonalPicturesDiv(2)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentPersonalPicturesDiv(3)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentPersonalPicturesDiv(4)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentPersonalPicturesDiv(5)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentPersonalPicturesDiv(6)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentPersonalPicturesDiv(7)"></span>
     <!-- Additional dots as needed -->
   </div>
 </div>
@@ -388,8 +285,8 @@ body {
 
 
 <!--   <div class="w3-container w3-green  w3-xlarge">
-      
-      
+      <div class="w3-left" onclick="minusPersonalPicturesDivs(1)"><i class="fa fa-arrow-circle-left w3-hover-text-grey"></i></div>
+      <div class="w3-right" onclick="plusPersonalPicturesDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-grey"></i></div>
     
       <div class="w3-center">
 <span class="w3-tag demodotsPersonal w3-border w3-transparent w3-hover-white" onclick="currentPersonalPicturesDiv(1)"></span>
@@ -401,13 +298,13 @@ body {
 <span class="w3-tag demodotsPersonal w3-border w3-transparent w3-hover-white" onclick="currentPersonalPicturesDiv(7)"></span>
       </div>
    </div> -->
-
 </div>
+     <div style="clear: both;"></div>
      <br>  
     </div>
-    <!-- </div>
+     </div>
+      <!--    </div>
 -->
-       </div>
    
     <!-- End Left Column -->
     </div>
@@ -995,53 +892,53 @@ body {
     <i class="fa fa-arrow-circle-right"></i>
   </div>
   <div class="w3-center" style="margin-top: 12px;">
-    <span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(1)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(2)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(3)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(4)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(5)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(6)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(7)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(8)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(9)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(10)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(11)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(12)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(13)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(14)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(15)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(16)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(17)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(18)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(19)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(20)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(21)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(22)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(23)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(24)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(25)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(26)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(27)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(28)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(29)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(30)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(31)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(32)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(33)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(34)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(35)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(36)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(37)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(38)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(39)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(40)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(41)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(42)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(43)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(44)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(45)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(46)"></span>
-<span class="w3-tag w3-dark w3-hover-white demodotsThesis" onclick="currentThesisDiv(47)"></span>
+    <span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(1)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(2)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(3)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(4)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(5)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(6)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(7)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(8)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(9)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(10)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(11)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(12)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(13)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(14)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(15)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(16)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(17)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(18)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(19)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(20)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(21)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(22)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(23)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(24)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(25)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(26)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(27)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(28)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(29)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(30)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(31)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(32)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(33)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(34)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(35)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(36)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(37)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(38)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(39)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(40)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(41)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(42)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(43)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(44)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(45)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(46)"></span>
+<span class="w3-tag w3-dark w3-hover-white demodots" onclick="currentThesisDiv(47)"></span>
 
     <!-- Additional dots as needed -->
   </div>
@@ -1138,145 +1035,108 @@ body {
 
 
 
-
-
-
-
-
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-// Auto-transition every 4 seconds
-setInterval(function() {
-  plusPersonalPicturesDivs(1);
-}, 8000);
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
 
-  var slideIndex = 1;
-  showDivs(slideIndex);
-
-  function plusDivs(n) {
-    showDivs(slideIndex += n);
-  }
-
-  function minusDivs(n) {
-    showDivs(slideIndex -= n);
-  }
-
-  function currentDiv(n) {
-    showDivs(slideIndex = n);
-  }
-
-  var slideThesisIndex = 1;
-  showThesisDivs(slideThesisIndex);
-  // Portfolio navigation functions
-  window.plusDivs = plusDivs;
-  window.minusDivs = minusDivs;
-  window.currentDiv = currentDiv;
-
-  // Thesis navigation functions
-  window.plusThesisDivs = plusThesisDivs;
-  window.minusThesisDivs = minusThesisDivs;
-  window.currentThesisDiv = currentThesisDiv;
-
-
-
-  function plusThesisDivs(n) {
-    showThesisDivs(slideThesisIndex += n);
-  }
-
-  function minusThesisDivs(n) {
-    showThesisDivs(slideThesisIndex -= n);
-  }
-
-  function currentThesisDiv(n) {
-    showThesisDivs(slideThesisIndex = n);
-  }
-
-  var slidePersonalPicturesIndex = 1;
-  showPersonalPicturesDivs(slidePersonalPicturesIndex);
-
-  window.plusPersonalPicturesDivs = function(n) {
-    showPersonalPicturesDivs(slidePersonalPicturesIndex += n);
-  }
-
-  window.minusPersonalPicturesDivs = function(n) {
-    showPersonalPicturesDivs(slidePersonalPicturesIndex -= n);
-  }
-
-  window.currentPersonalPicturesDiv = function(n) {
-    showPersonalPicturesDivs(slidePersonalPicturesIndex = n);
-  }
-
-  function showPersonalPicturesDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("myPersonalPicturesSlides");
-    var dots = document.getElementsByClassName("demodotsPersonal");
-    if (n > x.length) {slidePersonalPicturesIndex = 1}
-    if (n < 1) {slidePersonalPicturesIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" w3-white", "");
-    }
-    if (x[slidePersonalPicturesIndex-1]) {
-      x[slidePersonalPicturesIndex-1].style.display = "block";
-    }
-    if (dots[slidePersonalPicturesIndex-1]) {
-      dots[slidePersonalPicturesIndex-1].className += " w3-white";
-    }
-  }
-
-  function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demodots");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" w3-white", "");
-    }
-    if (x[slideIndex-1]) {
-      x[slideIndex-1].style.display = "block";
-    }
-    if (dots[slideIndex-1]) {
-      dots[slideIndex-1].className += " w3-white";
-    }
-  }
-
-  function showThesisDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("myThesisSlides");
-    var dots = document.getElementsByClassName("demodotsThesis");
-    if (n > x.length) {slideThesisIndex = 1}
-    if (n < 1) {slideThesisIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" w3-white", "");
-    }
-    if (x[slideThesisIndex-1]) {
-      x[slideThesisIndex-1].style.display = "block";
-    }
-    if (dots[slideThesisIndex-1]) {
-      dots[slideThesisIndex-1].className += " w3-white";
-    }
-  }
-});
-
-function toggleMobileDownloads() {
-  var dropdown = document.getElementById("mobileDownloadDropdown");
-  if (dropdown.style.display === "none" || dropdown.style.display === "") {
-    dropdown.style.display = "block";
-  } else {
-    dropdown.style.display = "none";
-  }
+function plusDivs(n) {
+  showDivs(slideIndex += n);
 }
 
+function minusDivs(n) {
+  showDivs(slideIndex -= n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+
+var slideThesisIndex = 1;
+showThesisDivs(slideThesisIndex);
+
+function plusThesisDivs(n) {
+  showThesisDivs(slideThesisIndex += n);
+}
+
+function minusThesisDivs(n) {
+  showThesisDivs(slideThesisIndex -= n);
+}
+
+function currentThesisDiv(n) {
+  showThesisDivs(slideThesisIndex = n);
+}
+
+
+
+var slidePersonalPicturesIndex = 1;
+showPersonalPicturesDivs(slidePersonalPicturesIndex);
+
+function plusPersonalPicturesDivs(n) {
+  showPersonalPicturesDivs(slidePersonalPicturesIndex += n);
+}
+
+function minusPersonalPicturesDivs(n) {
+  showPersonalPicturesDivs(slidePersonalPicturesIndex -= n);
+}
+
+function currentPersonalPicturesDiv(n) {
+  showPersonalPicturesDivs(slidePersonalPicturesIndex = n);
+}
+
+function showPersonalPicturesDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("myPersonalPicturesSlides");
+  var dots = document.getElementsByClassName("demodotsPersonal");
+  if (n > x.length) {slidePersonalPicturesIndex = 1}    
+  if (n < 1) {slidePersonalPicturesIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slidePersonalPicturesIndex-1].style.display = "block";  
+  dots[slidePersonalPicturesIndex-1].className += " w3-white";
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demodots");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+
+function showThesisDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("myThesisSlides");
+  var dots = document.getElementsByClassName("demodotsThesis");
+  if (n > x.length) {slideThesisIndex = 1}    
+  if (n < 1) {slideThesisIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideThesisIndex-1].style.display = "block";  
+  dots[slideThesisIndex-1].className += " w3-white";
+}
+
+
 </script>
+
+
 
 </body>
 </html>
