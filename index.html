@@ -110,8 +110,16 @@ img{
   margin-top:8px;
   border-radius:12px;
   overflow:hidden;
-}
 
+  max-height:0;
+  opacity:0;
+  transition:max-height .35s ease, opacity .25s ease;
+}
+#mobileMenu.w3-show{
+  max-height:300px;
+  opacity:1;
+}
+  
 #mobileMenu .w3-bar-item{
   color:#fff!important;
   border:none;
@@ -518,18 +526,22 @@ function showSlides(n){
 }
 
 function toggleMobileMenu(){
-  let x=document.getElementById("mobileMenu");
-  if(x.className.indexOf("w3-show")==-1){
-    x.className+=" w3-show";
+
+  let menu=document.getElementById("mobileMenu");
+
+  if(menu.classList.contains("w3-show")){
+    menu.classList.remove("w3-show");
   }else{
-    x.className=x.className.replace(" w3-show","");
+    menu.classList.add("w3-show");
   }
+
 }
 
 </script>
 
 </body>
 </html>
+
 
 
 
