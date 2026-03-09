@@ -46,6 +46,23 @@ img{
   overflow:visible;
 }
 
+/* SOFTWARE ICONS */
+
+.software-skill{
+  display:flex;
+  align-items:center;
+  margin-bottom:6px;
+}
+
+.software-icon{
+  width:18px;
+  height:18px;
+  margin-right:8px;
+  object-fit:contain;
+  box-shadow:none;
+  border-radius:0;
+}
+
 /* NAVBAR */
 
 .w3-top{
@@ -77,12 +94,16 @@ img{
 
 .mobile-menu-button{
   font-size:20px;
-  color:#333!important;
+  color:#fff!important;
+  background:linear-gradient(to right,#e3d9c1,#bba97d)!important;
+  border:1px solid rgba(255,255,255,0.6)!important;
 }
 
 .mobile-menu-button i{
-  color:#333!important;
+  color:#fff!important;
 }
+
+/* MOBILE MENU */
 
 #mobileMenu{
   background:linear-gradient(to right,#e3d9c1,#bba97d);
@@ -92,16 +113,17 @@ img{
 }
 
 #mobileMenu .w3-bar-item{
-  color:#333!important;
+  color:#fff!important;
   border:none;
-  border-top:1px solid rgba(0,0,0,0.15);
+  border-top:1px solid rgba(255,255,255,0.25);
   padding:14px 18px;
   font-weight:bold;
   margin-left:0;
+  background:transparent!important;
 }
 
 #mobileMenu .w3-bar-item:hover{
-  background-color:rgba(0,0,0,0.08)!important;
+  background-color:rgba(255,255,255,0.15)!important;
 }
 
 /* SLIDES */
@@ -197,11 +219,12 @@ footer i:hover{
   .mobile-menu-button{
     margin-left:8px!important;
     padding:8px 12px!important;
-    color:#333!important;
+    color:#fff!important;
+    background:linear-gradient(to right,#e3d9c1,#bba97d)!important;
   }
 
   .mobile-menu-button i{
-    color:#333!important;
+    color:#fff!important;
   }
 
   .myPersonalPicturesSlides img{
@@ -294,14 +317,45 @@ footer i:hover{
 
           <p class="w3-large"><b>Proficiencies</b></p>
 
-          <p>AutoCAD</p>
-          <p>Illustrator</p>
-          <p>Indesign</p>
-          <p>Lumion</p>
-          <p>Photoshop</p>
-          <p>Revit</p>
-          <p>Rhino</p>
-          <p>SketchUp</p>
+          <div class="software-skill">
+            <img class="software-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/autocad/autocad-original.svg" alt="AutoCAD icon">
+            <span>AutoCAD</span>
+          </div>
+
+          <div class="software-skill">
+            <img class="software-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator icon">
+            <span>Illustrator</span>
+          </div>
+
+          <div class="software-skill">
+            <img class="software-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/indesign/indesign-plain.svg" alt="InDesign icon">
+            <span>Indesign</span>
+          </div>
+
+          <div class="software-skill">
+            <img class="software-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Lumion icon">
+            <span>Lumion</span>
+          </div>
+
+          <div class="software-skill">
+            <img class="software-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop icon">
+            <span>Photoshop</span>
+          </div>
+
+          <div class="software-skill">
+            <img class="software-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/autodesk/autodesk-original.svg" alt="Revit icon">
+            <span>Revit</span>
+          </div>
+
+          <div class="software-skill">
+            <img class="software-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rhino/rhino-original.svg" alt="Rhino icon">
+            <span>Rhino</span>
+          </div>
+
+          <div class="software-skill">
+            <img class="software-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketchup/sketchup-original.svg" alt="SketchUp icon">
+            <span>SketchUp</span>
+          </div>
 
           <hr>
 
