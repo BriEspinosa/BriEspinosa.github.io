@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
 <title>Brian Espinosa</title>
@@ -13,142 +12,204 @@
 <style>
 
 html,body,h1,h2,h3,h4,h5,h6{
-font-family:'Lato',sans-serif;
-line-height:1.6;
+  font-family:'Lato',sans-serif;
+  line-height:1.6;
 }
 
 body{
-background-color:#f8f8fa;
-color:#333;
-padding-top:90px;
+  background-color:#f8f8fa;
+  color:#333;
+  padding-top:90px;
 }
 
 h2,h5{
-font-weight:600;
-border-bottom:1px solid #ccc;
-padding-bottom:4px;
+  font-weight:600;
+  border-bottom:1px solid #ccc;
+  padding-bottom:4px;
 }
 
 img{
-border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
-width:100%;
-height:auto;
+  border-radius:8px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+  width:100%;
+  height:auto;
 }
 
 .w3-card,.w3-card-4{
-box-shadow:0 4px 12px rgba(0,0,0,0.1)!important;
-border-radius:12px;
-background-color:#fffdf9!important;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1)!important;
+  border-radius:12px;
+  background-color:#fffdf9!important;
 }
 
 .w3-container{
-height:auto;
-overflow:visible;
+  height:auto;
+  overflow:visible;
 }
 
 /* NAVBAR */
 
+.w3-top{
+  padding:10px 16px 0 16px;
+}
+
 .w3-top .w3-bar{
-background:linear-gradient(to right,#e3d9c1,#bba97d);
-color:#fff;
+  background:linear-gradient(to right,#e3d9c1,#bba97d);
+  color:#fff;
+  border-radius:12px;
 }
 
 .w3-top .w3-bar .w3-bar-item{
-color:#fff!important;
-border:1px solid rgba(255,255,255,0.6);
-padding:6px 12px;
-border-radius:4px;
-margin-left:6px;
-font-weight:bold;
+  color:#fff!important;
+  border:1px solid rgba(255,255,255,0.6);
+  padding:6px 12px;
+  border-radius:4px;
+  margin-left:6px;
+  font-weight:bold;
 }
 
 .w3-top .w3-bar .w3-bar-item:hover{
-background-color:rgba(255,255,255,0.2);
+  background-color:rgba(255,255,255,0.2);
+}
+
+.brand-name{
+  margin-left:0!important;
+}
+
+.mobile-menu-button{
+  font-size:20px;
+}
+
+#mobileMenu{
+  background:linear-gradient(to right,#e3d9c1,#bba97d);
+  margin-top:8px;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+#mobileMenu .w3-bar-item{
+  color:#fff!important;
+  border:none;
+  border-top:1px solid rgba(255,255,255,0.25);
+  padding:14px 18px;
+  font-weight:bold;
+  margin-left:0;
+}
+
+#mobileMenu .w3-bar-item:hover{
+  background-color:rgba(255,255,255,0.15)!important;
 }
 
 /* SLIDES */
 
 .myPersonalPicturesSlides{
-display:none;
+  display:none;
 }
 
 .demodotsPersonal{
-border:1px solid white;
-width:12px;
-height:12px;
-display:inline-block;
-border-radius:50%;
-margin:0 4px;
-background-color:transparent;
+  border:1px solid white;
+  width:12px;
+  height:12px;
+  display:inline-block;
+  border-radius:50%;
+  margin:0 4px;
+  background-color:transparent;
 }
 
 .demodotsPersonal.w3-white{
-background-color:white!important;
+  background-color:white!important;
 }
 
 .myPersonalPicturesSlides img{
-width:100%;
-height:300px;
-object-fit:contain;
-background-color:#f8f8fa;
+  width:100%;
+  height:300px;
+  object-fit:contain;
+  background-color:#f8f8fa;
 }
 
 /* PDF VIEWER */
 
 .pdfViewer{
-width:100%;
-height:650px;
-border:none;
-border-radius:8px;
-overflow:auto;
+  width:100%;
+  height:650px;
+  border:none;
+  border-radius:8px;
+  overflow:auto;
 }
 
 /* FOOTER */
 
 footer{
-background:linear-gradient(to right,#e3d9c1,#bba97d);
-color:white;
-padding:20px;
-border-radius:12px;
-max-width:1400px;
-margin:40px auto 0 auto;
+  background:linear-gradient(to right,#e3d9c1,#bba97d);
+  color:white;
+  padding:20px;
+  border-radius:12px;
+  max-width:1400px;
+  margin:40px auto 0 auto;
 }
 
 footer i{
-font-size:20px;
-margin:0 6px;
-cursor:pointer;
-border:1px solid rgba(255,255,255,0.6);
-border-radius:6px;
-padding:6px 10px;
-transition:all .2s ease;
+  font-size:20px;
+  margin:0 6px;
+  cursor:pointer;
+  border:1px solid rgba(255,255,255,0.6);
+  border-radius:6px;
+  padding:6px 10px;
+  transition:all .2s ease;
 }
 
 footer i:hover{
-background-color:rgba(255,255,255,0.2);
-transform:translateY(-2px);
+  background-color:rgba(255,255,255,0.2);
+  transform:translateY(-2px);
 }
+
+/* MOBILE */
 
 @media only screen and (max-width:600px){
 
-body{
-padding-top:110px;
-}
+  body{
+    padding-top:120px;
+  }
 
-.myPersonalPicturesSlides img{
-height:auto;
-max-height:60vh;
-}
+  .w3-top{
+    padding:10px 10px 0 10px;
+  }
 
-.pdfViewer{
-height:500px;
-}
+  .w3-top .w3-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:nowrap;
+  }
 
+  .brand-name{
+    font-size:16px!important;
+    padding:8px 10px!important;
+    white-space:normal;
+    line-height:1.3;
+    max-width:75%;
+  }
+
+  .mobile-menu-button{
+    margin-left:8px!important;
+    padding:8px 12px!important;
+  }
+
+  .myPersonalPicturesSlides img{
+    height:auto;
+    max-height:60vh;
+  }
+
+  .pdfViewer{
+    height:500px;
+  }
+
+  footer{
+    margin-left:10px;
+    margin-right:10px;
+  }
 }
 
 </style>
-
 </head>
 
 <body>
@@ -156,195 +217,215 @@ height:500px;
 <!-- NAVBAR -->
 
 <div class="w3-top">
-<div class="w3-bar w3-padding w3-card">
+  <div class="w3-bar w3-padding w3-card">
 
-<a href="#" class="w3-bar-item" style="font-weight:700;font-size:18px;">
-Brian Angel Espinosa
-</a>
+    <a href="#" class="w3-bar-item brand-name" style="font-weight:700;font-size:18px;">
+      Brian Angel Espinosa
+    </a>
 
-<div class="w3-right w3-hide-small">
+    <!-- Desktop buttons -->
+    <div class="w3-right w3-hide-small">
 
-<a href="https://BriEspinosa.github.io/Brian%20Espinosa%20Resume.pdf" download class="w3-bar-item w3-button">
-Download Resume
-</a>
+      <a href="https://BriEspinosa.github.io/Brian%20Espinosa%20Resume.pdf" download class="w3-bar-item w3-button">
+        Download Resume
+      </a>
 
-<a href="https://BriEspinosa.github.io/Brian%20Espinosa%20Portfolio.pdf" download class="w3-bar-item w3-button">
-Download Portfolio
-</a>
+      <a href="https://BriEspinosa.github.io/Brian%20Espinosa%20Portfolio.pdf" download class="w3-bar-item w3-button">
+        Download Portfolio
+      </a>
 
-<a href="https://BriEspinosa.github.io/Brian%20Espinosa%20Thesis%20Book.pdf" download class="w3-bar-item w3-button">
-Download Masters Thesis Book
-</a>
+      <a href="https://BriEspinosa.github.io/Brian%20Espinosa%20Thesis%20Book.pdf" download class="w3-bar-item w3-button">
+        Download Masters Thesis Book
+      </a>
 
-</div>
-</div>
+    </div>
+
+    <!-- Mobile menu button -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large mobile-menu-button" onclick="toggleMobileMenu()">
+      <i class="fa fa-bars"></i>
+    </a>
+
+  </div>
+
+  <!-- Mobile dropdown -->
+  <div id="mobileMenu" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-card">
+    <a href="https://BriEspinosa.github.io/Brian%20Espinosa%20Resume.pdf" download class="w3-bar-item w3-button">
+      Download Resume
+    </a>
+
+    <a href="https://BriEspinosa.github.io/Brian%20Espinosa%20Portfolio.pdf" download class="w3-bar-item w3-button">
+      Download Portfolio
+    </a>
+
+    <a href="https://BriEspinosa.github.io/Brian%20Espinosa%20Thesis%20Book.pdf" download class="w3-bar-item w3-button">
+      Download Masters Thesis Book
+    </a>
+  </div>
 </div>
 
 <div class="w3-content w3-margin-top" style="max-width:1400px">
-<div class="w3-row-padding">
+  <div class="w3-row-padding">
 
-<!-- LEFT COLUMN -->
+    <!-- LEFT COLUMN -->
 
-<div class="w3-third">
-<div class="w3-white w3-text-grey w3-card-4">
+    <div class="w3-third">
+      <div class="w3-white w3-text-grey w3-card-4">
 
-<img src="https://BriEspinosa.github.io/New%20Profile%20Picture.jpg">
+        <img src="https://BriEspinosa.github.io/New%20Profile%20Picture.jpg">
 
-<div class="w3-container">
+        <div class="w3-container">
 
-<p><i class="fa fa-briefcase w3-margin-right"></i>Architectural Designer</p>
-<p><i class="fa fa-home w3-margin-right"></i>Riverview, Florida</p>
-<p><i class="fa fa-envelope w3-margin-right"></i>Brian.Angel.Espinosa@gmail.com</p>
-<p><i class="fa fa-phone w3-margin-right"></i>(813) 786 - 0186</p>
+          <p><i class="fa fa-briefcase w3-margin-right"></i>Architectural Designer</p>
+          <p><i class="fa fa-home w3-margin-right"></i>Riverview, Florida</p>
+          <p><i class="fa fa-envelope w3-margin-right"></i>Brian.Angel.Espinosa@gmail.com</p>
+          <p><i class="fa fa-phone w3-margin-right"></i>(813) 786 - 0186</p>
 
-<hr>
+          <hr>
 
-<p class="w3-large"><b>Proficiencies</b></p>
+          <p class="w3-large"><b>Proficiencies</b></p>
 
-<p>AutoCAD</p>
-<p>Illustrator</p>
-<p>Indesign</p>
-<p>Lumion</p>
-<p>Photoshop</p>
-<p>Revit</p>
-<p>Rhino</p>
-<p>SketchUp</p>
+          <p>AutoCAD</p>
+          <p>Illustrator</p>
+          <p>Indesign</p>
+          <p>Lumion</p>
+          <p>Photoshop</p>
+          <p>Revit</p>
+          <p>Rhino</p>
+          <p>SketchUp</p>
 
-<hr>
+          <hr>
 
-<p class="w3-large"><b>Photo Library</b></p>
+          <p class="w3-large"><b>Photo Library</b></p>
 
-<div class="w3-display-container myPersonalPicturesSlides">
-<img src="https://BriEspinosa.github.io/Washington%20DC.jpg">
-<p>Exploring Washington DC and seeing the cherry blossoms bloom.</p>
-</div>
+          <div class="w3-display-container myPersonalPicturesSlides">
+            <img src="https://BriEspinosa.github.io/Washington%20DC.jpg">
+            <p>Exploring Washington DC and seeing the cherry blossoms bloom.</p>
+          </div>
 
-<div class="w3-display-container myPersonalPicturesSlides">
-<img src="https://BriEspinosa.github.io/Wedding.jpg">
-<p>Getting to experience a friends big wedding day event!</p>
-</div>
+          <div class="w3-display-container myPersonalPicturesSlides">
+            <img src="https://BriEspinosa.github.io/Wedding.jpg">
+            <p>Getting to experience a friends big wedding day event!</p>
+          </div>
 
-<div class="w3-display-container myPersonalPicturesSlides">
-<img src="https://BriEspinosa.github.io/Open%20House.jpg">
-<p>Modeling next to my model at the USF open house!</p>
-</div>
+          <div class="w3-display-container myPersonalPicturesSlides">
+            <img src="https://BriEspinosa.github.io/Open%20House.jpg">
+            <p>Modeling next to my model at the USF open house!</p>
+          </div>
 
-<div class="w3-display-container myPersonalPicturesSlides">
-<img src="https://BriEspinosa.github.io/Graduation.jpg">
-<p>Graduating with close friends!</p>
-</div>
+          <div class="w3-display-container myPersonalPicturesSlides">
+            <img src="https://BriEspinosa.github.io/Graduation.jpg">
+            <p>Graduating with close friends!</p>
+          </div>
 
-<div class="w3-display-container myPersonalPicturesSlides">
-<img src="https://BriEspinosa.github.io/Adventure.jpg">
-<p>Experiencing new adventures!</p>
-</div>
+          <div class="w3-display-container myPersonalPicturesSlides">
+            <img src="https://BriEspinosa.github.io/Adventure.jpg">
+            <p>Experiencing new adventures!</p>
+          </div>
 
-<div class="w3-display-container myPersonalPicturesSlides">
-<img src="https://BriEspinosa.github.io/Bee%20Extraction%20Example.jpg">
-<p>Extracting a feral beehive inside a water meter.</p>
-</div>
+          <div class="w3-display-container myPersonalPicturesSlides">
+            <img src="https://BriEspinosa.github.io/Bee%20Extraction%20Example.jpg">
+            <p>Extracting a feral beehive inside a water meter.</p>
+          </div>
 
-<div class="w3-display-container myPersonalPicturesSlides">
-<img src="https://BriEspinosa.github.io/Bee%20Frame.jpg">
-<p>A beehive frame with workers and honeycomb.</p>
-</div>
+          <div class="w3-display-container myPersonalPicturesSlides">
+            <img src="https://BriEspinosa.github.io/Bee%20Frame.jpg">
+            <p>A beehive frame with workers and honeycomb.</p>
+          </div>
 
-<div class="w3-center" style="margin-top:12px">
-<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(1)"></span>
-<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(2)"></span>
-<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(3)"></span>
-<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(4)"></span>
-<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(5)"></span>
-<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(6)"></span>
-<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(7)"></span>
-</div>
+          <div class="w3-center" style="margin-top:12px">
+            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(1)"></span>
+            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(2)"></span>
+            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(3)"></span>
+            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(4)"></span>
+            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(5)"></span>
+            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(6)"></span>
+            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(7)"></span>
+          </div>
 
-</div>
-</div>
-</div>
+        </div>
+      </div>
+    </div>
 
-<!-- RIGHT COLUMN -->
+    <!-- RIGHT COLUMN -->
 
-<div class="w3-twothird">
+    <div class="w3-twothird">
 
-<div class="w3-container w3-card w3-white w3-margin-bottom">
-<h2>About Me</h2>
-<p>
-I am currently working as an Architectural Designer at Stratus (formally known as Zyscovich) and am on the path to becoming a licensed architect. I recently adopted a neighborhood tuxedo cat and named him Elmer! I enjoy hiking, traveling, running, and exploring new cuisines.
-</p>
-</div>
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2>About Me</h2>
+        <p>
+          I am currently working as an Architectural Designer at Stratus (formally known as Zyscovich) and am on the path to becoming a licensed architect. I recently adopted a neighborhood tuxedo cat and named him Elmer! I enjoy hiking, traveling, running, and exploring new cuisines.
+        </p>
+      </div>
 
-<div class="w3-container w3-card w3-white w3-margin-bottom">
-<h2>Ambitions</h2>
-<p>
-My goal is to become a licensed architect in Florida and develop skills in property development with a focus on custom homes.
-</p>
-</div>
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2>Ambitions</h2>
+        <p>
+          My goal is to become a licensed architect in Florida and develop skills in property development with a focus on custom homes.
+        </p>
+      </div>
 
-<div class="w3-container w3-card w3-white w3-margin-bottom">
-<h2>Projects</h2>
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2>Projects</h2>
 
-<h5>3D Printing</h5>
-<p>I enjoy designing functional 3D prints that range from everyday household objects to more elaborate models used for architectural studies. In my professional work, I also produce models of completed projects and 3D print them for clients as a way to showcase the firm’s work and highlight the successful collaboration between the firm and its partners.</p>
-<hr>
+        <h5>3D Printing</h5>
+        <p>I enjoy designing functional 3D prints that range from everyday household objects to more elaborate models used for architectural studies. In my professional work, I also produce models of completed projects and 3D print them for clients as a way to showcase the firm’s work and highlight the successful collaboration between the firm and its partners.</p>
+        <hr>
 
-<h5>Bee Keeping and Removal</h5>
-<p>What began as a summer class at the University of Florida eventually grew into a side venture with my father, where we safely relocate feral bee colonies into managed hives to promote pollination and saving the bees!</p>
-<hr>
+        <h5>Bee Keeping and Removal</h5>
+        <p>What began as a summer class at the University of Florida eventually grew into a side venture with my father, where we safely relocate feral bee colonies into managed hives to promote pollination and saving the bees!</p>
+        <hr>
 
-<h5>Computer Coding</h5>
-<p>I started coding in high school and still love building personal projects today—like this website, where I've taught myself HTML and dabbled in Java and C++</p>
-</div>
+        <h5>Computer Coding</h5>
+        <p>I started coding in high school and still love building personal projects today—like this website, where I've taught myself HTML and dabbled in Java and C++</p>
+      </div>
 
-<div class="w3-container w3-card w3-white">
-<h2>Resume</h2>
+      <div class="w3-container w3-card w3-white">
+        <h2>Resume</h2>
 
-<iframe class="pdfViewer"
-src="https://docs.google.com/gview?url=https://BriEspinosa.github.io/Brian%20Espinosa%20Resume.pdf&embedded=true">
-</iframe>
+        <iframe class="pdfViewer"
+        src="https://docs.google.com/gview?url=https://BriEspinosa.github.io/Brian%20Espinosa%20Resume.pdf&embedded=true">
+        </iframe>
+      </div>
 
-</div>
+    </div>
+  </div>
 
-</div>
-</div>
+  <!-- PORTFOLIO -->
 
-<!-- PORTFOLIO -->
+  <div class="w3-container w3-card w3-white w3-margin">
+    <h2>Architecture Portfolio</h2>
 
-<div class="w3-container w3-card w3-white w3-margin">
-<h2>Architecture Portfolio</h2>
+    <iframe class="pdfViewer"
+    src="https://docs.google.com/gview?url=https://BriEspinosa.github.io/Brian%20Espinosa%20Portfolio.pdf&embedded=true">
+    </iframe>
+  </div>
 
-<iframe class="pdfViewer"
-src="https://docs.google.com/gview?url=https://BriEspinosa.github.io/Brian%20Espinosa%20Portfolio.pdf&embedded=true">
-</iframe>
+  <!-- THESIS -->
 
-</div>
+  <div class="w3-container w3-card w3-white w3-margin">
+    <h2>Masters Thesis Project (Reduced)</h2>
 
-<!-- THESIS -->
-
-<div class="w3-container w3-card w3-white w3-margin">
-<h2>Masters Thesis Project (Reduced)</h2>
-
-<iframe class="pdfViewer"
-src="https://docs.google.com/gview?url=https://BriEspinosa.github.io/Brian%20Espinosa%20Thesis%20Book%20Condensed.pdf&embedded=true">
-</iframe>
-
+    <iframe class="pdfViewer"
+    src="https://docs.google.com/gview?url=https://BriEspinosa.github.io/Brian%20Espinosa%20Thesis%20Book%20Condensed.pdf&embedded=true">
+    </iframe>
+  </div>
 </div>
 
 <footer class="w3-container w3-center w3-margin-top" style="padding-top:30px;padding-bottom:30px;">
 
-<p>My Social Media Pages!</p>
+  <p>My Social Media Pages!</p>
 
-<a href="https://www.facebook.com/brian.d.espinosa">
-<i class="fa fa-facebook-official"></i>
-</a>
+  <a href="https://www.facebook.com/brian.d.espinosa">
+    <i class="fa fa-facebook-official"></i>
+  </a>
 
-<a href="https://www.instagram.com/brian_angel_espinosa">
-<i class="fa fa-instagram"></i>
-</a>
+  <a href="https://www.instagram.com/brian_angel_espinosa">
+    <i class="fa fa-instagram"></i>
+  </a>
 
-<a href="https://www.linkedin.com/in/brian-angel-espinosa">
-<i class="fa fa-linkedin"></i>
-</a>
+  <a href="https://www.linkedin.com/in/brian-angel-espinosa">
+    <i class="fa fa-linkedin"></i>
+  </a>
 
 </footer>
 
@@ -354,40 +435,49 @@ let slideIndex=1;
 showSlides(slideIndex);
 
 setInterval(function(){
-slideIndex++;
-showSlides(slideIndex);
+  slideIndex++;
+  showSlides(slideIndex);
 },8000);
 
 function currentPersonalPicturesDiv(n){
-showSlides(slideIndex=n);
+  showSlides(slideIndex=n);
 }
 
 function showSlides(n){
 
-let i;
-let slides=document.getElementsByClassName("myPersonalPicturesSlides");
-let dots=document.getElementsByClassName("demodotsPersonal");
+  let i;
+  let slides=document.getElementsByClassName("myPersonalPicturesSlides");
+  let dots=document.getElementsByClassName("demodotsPersonal");
 
-if(n>slides.length){slideIndex=1}
-if(n<1){slideIndex=slides.length}
+  if(n>slides.length){slideIndex=1}
+  if(n<1){slideIndex=slides.length}
 
-for(i=0;i<slides.length;i++){
-slides[i].style.display="none";
+  for(i=0;i<slides.length;i++){
+    slides[i].style.display="none";
+  }
+
+  for(i=0;i<dots.length;i++){
+    dots[i].className=dots[i].className.replace(" w3-white","");
+  }
+
+  slides[slideIndex-1].style.display="block";
+  dots[slideIndex-1].className+=" w3-white";
 }
 
-for(i=0;i<dots.length;i++){
-dots[i].className=dots[i].className.replace(" w3-white","");
-}
-
-slides[slideIndex-1].style.display="block";
-dots[slideIndex-1].className+=" w3-white";
-
+function toggleMobileMenu(){
+  let x=document.getElementById("mobileMenu");
+  if(x.className.indexOf("w3-show")==-1){
+    x.className+=" w3-show";
+  }else{
+    x.className=x.className.replace(" w3-show","");
+  }
 }
 
 </script>
 
 </body>
 </html>
+
 
 
 
