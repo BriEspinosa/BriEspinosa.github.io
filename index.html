@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 <title>Brian Espinosa</title>
@@ -46,6 +47,8 @@ height:auto;
 overflow:visible;
 }
 
+/* NAVBAR */
+
 .w3-top .w3-bar{
 background:linear-gradient(to right,#a8dadc,#457b9d);
 color:#fff;
@@ -59,6 +62,21 @@ border-radius:4px;
 margin-left:6px;
 font-weight:bold;
 }
+
+.w3-top .w3-bar .w3-bar-item:hover{
+background-color:rgba(255,255,255,0.2);
+}
+
+/* NAME FIX */
+
+.site-name{
+color:#1d3557 !important;
+font-weight:700;
+font-size:18px;
+border:none !important;
+}
+
+/* SLIDES */
 
 .myPersonalPicturesSlides{
 display:none;
@@ -85,13 +103,34 @@ object-fit:contain;
 background-color:#f8f8fa;
 }
 
+/* PDF VIEWER */
+
 .pdfViewer{
 width:100%;
 height:1000px;
 border:none;
 }
 
+/* FOOTER MATCHING NAVBAR */
+
+footer{
+background:linear-gradient(to right,#a8dadc,#457b9d);
+color:white;
+padding:20px;
+}
+
+footer i{
+font-size:24px;
+margin:0 10px;
+cursor:pointer;
+}
+
+footer i:hover{
+opacity:0.7;
+}
+
 @media only screen and (max-width:600px){
+
 .myPersonalPicturesSlides img{
 height:auto;
 max-height:60vh;
@@ -100,6 +139,7 @@ max-height:60vh;
 .pdfViewer{
 height:700px;
 }
+
 }
 
 </style>
@@ -113,7 +153,7 @@ height:700px;
 <div class="w3-top">
 <div class="w3-bar w3-padding w3-card">
 
-<a href="#" class="w3-bar-item w3-button">
+<a href="#" class="w3-bar-item w3-button site-name">
 Brian Angel <b>Espinosa</b>
 </a>
 
@@ -208,13 +248,7 @@ Download Masters Thesis Book
 
 <div class="w3-center" style="margin-top:12px">
 
-<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(1)"></span>
-<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(2)"></span>
-<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(3)"></span>
-<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(4)"></span>
-<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(5)"></span>
-<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(6)"></span>
-<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(7)"></span>
+<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(1)"></span> <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(2)"></span> <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(3)"></span> <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(4)"></span> <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(5)"></span> <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(6)"></span> <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(7)"></span>
 
 </div>
 
@@ -271,9 +305,6 @@ My goal is to become a licensed architect in Florida and develop skills in prope
 
 <iframe class="pdfViewer"
 src="https://BriEspinosa.github.io/Brian%20Espinosa%20Resume.pdf">
-
-<embed src="https://BriEspinosa.github.io/Brian%20Espinosa%20Resume.pdf" type="application/pdf"/>
-
 </iframe>
 
 </div>
@@ -290,9 +321,6 @@ src="https://BriEspinosa.github.io/Brian%20Espinosa%20Resume.pdf">
 
 <iframe class="pdfViewer"
 src="https://BriEspinosa.github.io/Brian%20Espinosa%20Portfolio.pdf">
-
-<embed src="https://BriEspinosa.github.io/Brian%20Espinosa%20Portfolio.pdf" type="application/pdf"/>
-
 </iframe>
 
 </div>
@@ -305,14 +333,11 @@ src="https://BriEspinosa.github.io/Brian%20Espinosa%20Portfolio.pdf">
 
 <iframe class="pdfViewer"
 src="https://BriEspinosa.github.io/Brian%20Espinosa%20Thesis%20Book.pdf">
-
-<embed src="https://BriEspinosa.github.io/Brian%20Espinosa%20Thesis%20Book.pdf" type="application/pdf"/>
-
 </iframe>
 
 </div>
 
-<footer class="w3-container w3-dark-grey w3-center w3-margin-top">
+<footer class="w3-container w3-center w3-margin-top">
 
 <p>Find me on social media</p>
 
