@@ -11,6 +11,61 @@
 
 <style>
 
+/* SLIDESHOW TIMER */
+
+.slideshow-wrapper{
+  position:relative;
+}
+
+.slide-timer{
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:42px;
+  height:42px;
+  z-index:5;
+  pointer-events:none;
+}
+
+.slide-timer svg{
+  width:100%;
+  height:100%;
+  transform:rotate(-90deg);
+}
+
+.timer-bg{
+  fill:rgba(255,255,255,0.35);
+  stroke:rgba(255,255,255,0.45);
+  stroke-width:2;
+}
+
+.timer-progress{
+  fill:none;
+  stroke:#ffffff;
+  stroke-width:4;
+  stroke-linecap:round;
+  stroke-dasharray:100.53;
+  stroke-dashoffset:0;
+}
+
+.timer-reset{
+  animation:none;
+}
+
+.timer-animate{
+  animation:countdownRing 5s linear forwards;
+}
+
+@keyframes countdownRing{
+  from{
+    stroke-dashoffset:0;
+  }
+  to{
+    stroke-dashoffset:100.53;
+  }
+}
+
+  
 html,body,h1,h2,h3,h4,h5,h6{
   font-family:'Lato',sans-serif;
   line-height:1.6;
@@ -362,6 +417,15 @@ footer p{
 <hr>
 
           <p class="w3-large"><b>Photo Slideshow</b></p>
+
+<div class="slideshow-wrapper">
+
+  <div class="slide-timer">
+    <svg viewBox="0 0 40 40">
+      <circle class="timer-bg" cx="20" cy="20" r="16"></circle>
+      <circle id="timerProgress" class="timer-progress timer-animate" cx="20" cy="20" r="16"></circle>
+    </svg>
+  </div>
   
 <div class="w3-display-container myPersonalPicturesSlides">
             <img src="https://BriEspinosa.github.io/Sockhop.jpeg">
@@ -473,7 +537,7 @@ footer p{
             <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(17)"></span>
             <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(18)"></span>
           </div>
-
+</div>
         </div>
       </div>
     </div>
@@ -571,55 +635,79 @@ footer p{
 
 <script>
 
-let slideIndex=1;
-showSlides(slideIndex);
+let slideIndex = 1;
+let slideDuration = 5000;
+let slideInterval;
 
-setInterval(function(){
-  slideIndex++;
-  showSlides(slideIndex);
-},5000);
+showSlides(slideIndex);
+startSlideshow();
+
+function startSlideshow(){
+  clearInterval(slideInterval);
+  resetTimerAnimation();
+
+  slideInterval = setInterval(function(){
+    slideIndex++;
+    showSlides(slideIndex);
+    resetTimerAnimation();
+  }, slideDuration);
+}
+
+function resetTimerAnimation(){
+  const timer = document.getElementById("timerProgress");
+  if(!timer) return;
+
+  timer.classList.remove("timer-animate");
+  timer.classList.add("timer-reset");
+
+  void timer.offsetWidth; // forces reflow so animation restarts cleanly
+
+  timer.classList.remove("timer-reset");
+  timer.classList.add("timer-animate");
+}
 
 function currentPersonalPicturesDiv(n){
-  showSlides(slideIndex=n);
+  slideIndex = n;
+  showSlides(slideIndex);
+  startSlideshow();
 }
 
 function showSlides(n){
 
   let i;
-  let slides=document.getElementsByClassName("myPersonalPicturesSlides");
-  let dots=document.getElementsByClassName("demodotsPersonal");
+  let slides = document.getElementsByClassName("myPersonalPicturesSlides");
+  let dots = document.getElementsByClassName("demodotsPersonal");
 
-  if(n>slides.length){slideIndex=1}
-  if(n<1){slideIndex=slides.length}
+  if(n > slides.length){slideIndex = 1}
+  if(n < 1){slideIndex = slides.length}
 
-  for(i=0;i<slides.length;i++){
-    slides[i].style.display="none";
+  for(i = 0; i < slides.length; i++){
+    slides[i].style.display = "none";
   }
 
-  for(i=0;i<dots.length;i++){
-    dots[i].className=dots[i].className.replace(" w3-white","");
+  for(i = 0; i < dots.length; i++){
+    dots[i].className = dots[i].className.replace(" w3-white","");
   }
 
-  slides[slideIndex-1].style.display="block";
-  dots[slideIndex-1].className+=" w3-white";
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " w3-white";
 }
 
 function toggleMobileMenu(){
-
-  let menu=document.getElementById("mobileMenu");
+  let menu = document.getElementById("mobileMenu");
 
   if(menu.classList.contains("w3-show")){
     menu.classList.remove("w3-show");
   }else{
     menu.classList.add("w3-show");
   }
-
 }
 
 </script>
 
 </body>
 </html>
+
 
 
 
