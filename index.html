@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
 <title>Brian Espinosa</title>
@@ -20,6 +19,7 @@ line-height:1.6;
 body{
 background-color:#f8f8fa;
 color:#333;
+padding-top:70px;
 }
 
 h2,h5{
@@ -39,6 +39,11 @@ height:auto;
 box-shadow:0 4px 12px rgba(0,0,0,0.1)!important;
 border-radius:12px;
 background-color:#fffdf9!important;
+}
+
+.w3-container{
+height:auto;
+overflow:visible;
 }
 
 .w3-top .w3-bar{
@@ -80,10 +85,20 @@ object-fit:contain;
 background-color:#f8f8fa;
 }
 
+.pdfViewer{
+width:100%;
+height:1000px;
+border:none;
+}
+
 @media only screen and (max-width:600px){
 .myPersonalPicturesSlides img{
 height:auto;
 max-height:60vh;
+}
+
+.pdfViewer{
+height:700px;
 }
 }
 
@@ -104,15 +119,15 @@ Brian Angel <b>Espinosa</b>
 
 <div class="w3-right w3-hide-small">
 
-<a href="https://BriEspinosa.github.io/Brian Espinosa Resume.pdf" download class="w3-bar-item w3-button">
+<a href="https://BriEspinosa.github.io/Brian%20Espinosa%20Resume.pdf" download class="w3-bar-item w3-button">
 Download Resume
 </a>
 
-<a href="https://BriEspinosa.github.io/Brian Espinosa Portfolio.pdf" class="w3-bar-item w3-button">
+<a href="https://BriEspinosa.github.io/Brian%20Espinosa%20Portfolio.pdf" download class="w3-bar-item w3-button">
 Download Portfolio
 </a>
 
-<a href="https://BriEspinosa.github.io/Brian Espinosa Thesis Book.pdf" download class="w3-bar-item w3-button">
+<a href="https://BriEspinosa.github.io/Brian%20Espinosa%20Thesis%20Book.pdf" download class="w3-bar-item w3-button">
 Download Masters Thesis Book
 </a>
 
@@ -130,7 +145,7 @@ Download Masters Thesis Book
 
 <div class="w3-white w3-text-grey w3-card-4">
 
-<img src="https://BriEspinosa.github.io/New Profile Picture.jpg">
+<img src="https://BriEspinosa.github.io/New%20Profile%20Picture.jpg">
 
 <div class="w3-container">
 
@@ -157,7 +172,7 @@ Download Masters Thesis Book
 <p class="w3-large"><b>Photo Library</b></p>
 
 <div class="w3-display-container myPersonalPicturesSlides">
-<img src="https://BriEspinosa.github.io/Washington DC.jpg">
+<img src="https://BriEspinosa.github.io/Washington%20DC.jpg">
 <p>Exploring Washington DC and seeing the cherry blossoms bloom.</p>
 </div>
 
@@ -167,7 +182,7 @@ Download Masters Thesis Book
 </div>
 
 <div class="w3-display-container myPersonalPicturesSlides">
-<img src="https://BriEspinosa.github.io/Open House.jpg">
+<img src="https://BriEspinosa.github.io/Open%20House.jpg">
 <p>Modeling next to my model at the USF open house!</p>
 </div>
 
@@ -182,18 +197,24 @@ Download Masters Thesis Book
 </div>
 
 <div class="w3-display-container myPersonalPicturesSlides">
-<img src="https://BriEspinosa.github.io/Bee Extraction Example.jpg">
+<img src="https://BriEspinosa.github.io/Bee%20Extraction%20Example.jpg">
 <p>Extracting a feral beehive inside a water meter.</p>
 </div>
 
 <div class="w3-display-container myPersonalPicturesSlides">
-<img src="https://BriEspinosa.github.io/Bee Frame.jpg">
+<img src="https://BriEspinosa.github.io/Bee%20Frame.jpg">
 <p>A beehive frame with workers and honeycomb.</p>
 </div>
 
 <div class="w3-center" style="margin-top:12px">
 
-<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(1)"></span> <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(2)"></span> <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(3)"></span> <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(4)"></span> <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(5)"></span> <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(6)"></span> <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(7)"></span>
+<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(1)"></span>
+<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(2)"></span>
+<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(3)"></span>
+<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(4)"></span>
+<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(5)"></span>
+<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(6)"></span>
+<span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(7)"></span>
 
 </div>
 
@@ -248,11 +269,11 @@ My goal is to become a licensed architect in Florida and develop skills in prope
 
 <h2>Resume</h2>
 
-<iframe
-src="https://BriEspinosa.github.io/Brian Espinosa Resume.pdf#toolbar=0"
-width="100%"
-height="1000px"
-style="border:none;">
+<iframe class="pdfViewer"
+src="https://BriEspinosa.github.io/Brian%20Espinosa%20Resume.pdf">
+
+<embed src="https://BriEspinosa.github.io/Brian%20Espinosa%20Resume.pdf" type="application/pdf"/>
+
 </iframe>
 
 </div>
@@ -267,11 +288,11 @@ style="border:none;">
 
 <h2>Architecture Portfolio</h2>
 
-<iframe
-src="https://BriEspinosa.github.io/Brian Espinosa Portfolio.pdf#toolbar=0"
-width="100%"
-height="1000px"
-style="border:none;">
+<iframe class="pdfViewer"
+src="https://BriEspinosa.github.io/Brian%20Espinosa%20Portfolio.pdf">
+
+<embed src="https://BriEspinosa.github.io/Brian%20Espinosa%20Portfolio.pdf" type="application/pdf"/>
+
 </iframe>
 
 </div>
@@ -282,11 +303,11 @@ style="border:none;">
 
 <h2>Masters Thesis Project</h2>
 
-<iframe
-src="https://BriEspinosa.github.io/Brian Espinosa Thesis Book.pdf#toolbar=0"
-width="100%"
-height="1000px"
-style="border:none;">
+<iframe class="pdfViewer"
+src="https://BriEspinosa.github.io/Brian%20Espinosa%20Thesis%20Book.pdf">
+
+<embed src="https://BriEspinosa.github.io/Brian%20Espinosa%20Thesis%20Book.pdf" type="application/pdf"/>
+
 </iframe>
 
 </div>
