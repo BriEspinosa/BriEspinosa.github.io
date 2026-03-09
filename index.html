@@ -150,6 +150,16 @@ img{
 
 .myPersonalPicturesSlides{
   display:none;
+  animation:fadeSlide .45s ease;
+}
+
+@keyframes fadeSlide{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
 }
 
 .demodotsPersonal{
@@ -160,6 +170,7 @@ img{
   border-radius:50%;
   margin:0 4px;
   background-color:transparent;
+  cursor:pointer;
 }
 
 .demodotsPersonal.w3-white{
@@ -212,6 +223,43 @@ img{
   stroke-linecap:round;
   stroke-dasharray:100.53;
   stroke-dashoffset:0;
+}
+
+.slide-nav{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:45;
+  width:34px;
+  height:34px;
+  border:none;
+  border-radius:50%;
+  background:rgba(0,0,0,0.45);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:background .2s ease, transform .2s ease;
+  padding:0;
+}
+
+.slide-nav:hover{
+  background:rgba(0,0,0,0.65);
+  transform:translateY(-50%) scale(1.05);
+}
+
+.slide-nav i{
+  font-size:16px;
+  line-height:1;
+}
+
+.slide-prev{
+  left:10px;
+}
+
+.slide-next{
+  right:10px;
 }
 
 @keyframes countdownRing{
@@ -335,6 +383,19 @@ footer p{
     margin-left:10px;
     margin-right:10px;
   }
+
+  .slide-nav{
+    width:30px;
+    height:30px;
+  }
+
+  .slide-prev{
+    left:8px;
+  }
+
+  .slide-next{
+    right:8px;
+  }
 }
 
 </style>
@@ -430,6 +491,14 @@ footer p{
                 <circle id="timerProgress" class="timer-progress" cx="20" cy="20" r="16"></circle>
               </svg>
             </div>
+
+            <button class="slide-nav slide-prev" onclick="manualChangeSlide(-1)" aria-label="Previous photo">
+              <i class="fa fa-chevron-left"></i>
+            </button>
+
+            <button class="slide-nav slide-next" onclick="manualChangeSlide(1)" aria-label="Next photo">
+              <i class="fa fa-chevron-right"></i>
+            </button>
 
             <div class="w3-display-container myPersonalPicturesSlides">
               <img src="https://BriEspinosa.github.io/Sockhop.jpeg">
@@ -642,19 +711,25 @@ footer p{
 let slideIndex = 1;
 let slideDuration = 5000;
 let slideTimeout = null;
+let timerStartedAt = null;
+let timeRemaining = slideDuration;
+let isPaused = false;
 
 showSlides(slideIndex);
-restartTimer();
-scheduleNextSlide();
+restartTimer(timeRemaining);
+scheduleNextSlide(timeRemaining);
 
-function scheduleNextSlide(){
+function scheduleNextSlide(delay = slideDuration){
   clearTimeout(slideTimeout);
+  timerStartedAt = Date.now();
+  timeRemaining = delay;
+
   slideTimeout = setTimeout(function(){
     changeSlide(1);
-  }, slideDuration);
+  }, delay);
 }
 
-function restartTimer(){
+function restartTimer(duration = slideDuration){
   const oldTimer = document.getElementById("timerProgress");
   if(!oldTimer) return;
 
@@ -667,21 +742,53 @@ function restartTimer(){
 
   void newTimer.getBoundingClientRect();
 
-  newTimer.style.animation = `countdownRing ${slideDuration}ms linear forwards`;
+  newTimer.style.animation = `countdownRing ${duration}ms linear forwards`;
+}
+
+function pauseSlideshow(){
+  if(isPaused) return;
+  isPaused = true;
+
+  clearTimeout(slideTimeout);
+
+  const elapsed = Date.now() - timerStartedAt;
+  timeRemaining = Math.max(0, timeRemaining - elapsed);
+
+  const timer = document.getElementById("timerProgress");
+  if(timer){
+    const computedStyle = window.getComputedStyle(timer);
+    const currentOffset = computedStyle.strokeDashoffset;
+    timer.style.animation = "none";
+    timer.style.strokeDashoffset = currentOffset;
+  }
+}
+
+function resumeSlideshow(){
+  if(!isPaused) return;
+  isPaused = false;
+
+  restartTimer(timeRemaining);
+  scheduleNextSlide(timeRemaining);
 }
 
 function changeSlide(step){
   slideIndex += step;
   showSlides(slideIndex);
-  restartTimer();
-  scheduleNextSlide();
+  timeRemaining = slideDuration;
+  restartTimer(timeRemaining);
+  scheduleNextSlide(timeRemaining);
+}
+
+function manualChangeSlide(step){
+  changeSlide(step);
 }
 
 function currentPersonalPicturesDiv(n){
   slideIndex = n;
   showSlides(slideIndex);
-  restartTimer();
-  scheduleNextSlide();
+  timeRemaining = slideDuration;
+  restartTimer(timeRemaining);
+  scheduleNextSlide(timeRemaining);
 }
 
 function showSlides(n){
@@ -711,6 +818,9 @@ let touchEndX = 0;
 const slideshowWrapper = document.getElementById("slideshowWrapper");
 
 if(slideshowWrapper){
+  slideshowWrapper.addEventListener("mouseenter", pauseSlideshow);
+  slideshowWrapper.addEventListener("mouseleave", resumeSlideshow);
+
   slideshowWrapper.addEventListener("touchstart", function(e){
     touchStartX = e.changedTouches[0].screenX;
   }, { passive:true });
@@ -726,9 +836,9 @@ function handleSwipe(){
   if(Math.abs(swipeDistance) < 50) return;
 
   if(swipeDistance < 0){
-    changeSlide(1);
+    manualChangeSlide(1);
   }else{
-    changeSlide(-1);
+    manualChangeSlide(-1);
   }
 }
 
@@ -760,9 +870,9 @@ function handleMouseSwipe(){
   if(Math.abs(swipeDistance) < 50) return;
 
   if(swipeDistance < 0){
-    changeSlide(1);
+    manualChangeSlide(1);
   }else{
-    changeSlide(-1);
+    manualChangeSlide(-1);
   }
 }
 
@@ -779,5 +889,3 @@ function toggleMobileMenu(){
 
 </body>
 </html>
-
-
