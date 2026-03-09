@@ -11,61 +11,6 @@
 
 <style>
 
-/* SLIDESHOW TIMER */
-
-.slideshow-wrapper{
-  position:relative;
-}
-
-.slide-timer{
-  position:absolute;
-  top:10px;
-  right:10px;
-  width:42px;
-  height:42px;
-  z-index:5;
-  pointer-events:none;
-}
-
-.slide-timer svg{
-  width:100%;
-  height:100%;
-  transform:rotate(-90deg);
-}
-
-.timer-bg{
-  fill:rgba(255,255,255,0.35);
-  stroke:rgba(255,255,255,0.45);
-  stroke-width:2;
-}
-
-.timer-progress{
-  fill:none;
-  stroke:#ffffff;
-  stroke-width:4;
-  stroke-linecap:round;
-  stroke-dasharray:100.53;
-  stroke-dashoffset:0;
-}
-
-.timer-reset{
-  animation:none;
-}
-
-.timer-animate{
-  animation:countdownRing 5s linear forwards;
-}
-
-@keyframes countdownRing{
-  from{
-    stroke-dashoffset:0;
-  }
-  to{
-    stroke-dashoffset:100.53;
-  }
-}
-
-  
 html,body,h1,h2,h3,h4,h5,h6{
   font-family:'Lato',sans-serif;
   line-height:1.6;
@@ -150,6 +95,7 @@ img{
   padding-top:8px!important;
   padding-bottom:8px!important;
 }
+
 .mobile-menu-button{
   font-size:20px;
   color:#fff!important;
@@ -168,11 +114,11 @@ img{
   margin-top:8px;
   border-radius:12px;
   overflow:hidden;
-
   max-height:0;
   opacity:0;
   transition:max-height .35s ease, opacity .25s ease;
 }
+
 #mobileMenu.w3-show{
   max-height:300px;
   opacity:1;
@@ -219,6 +165,62 @@ img{
   background-color:#f8f8fa;
 }
 
+.slideshow-wrapper{
+  position:relative;
+  touch-action:pan-y;
+  user-select:none;
+  -webkit-user-select:none;
+}
+
+.slide-timer{
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:42px;
+  height:42px;
+  z-index:5;
+  pointer-events:none;
+}
+
+.slide-timer svg{
+  width:100%;
+  height:100%;
+  transform:rotate(-90deg);
+}
+
+.timer-bg{
+  fill:rgba(0,0,0,0.35);
+  stroke:rgba(0,0,0,0.55);
+  stroke-width:2;
+}
+
+.timer-progress{
+  fill:none;
+  stroke:#111;
+  stroke-width:4;
+  stroke-linecap:round;
+  stroke-dasharray:100.53;
+  stroke-dashoffset:0;
+  filter:drop-shadow(0 1px 2px rgba(255,255,255,0.35));
+}
+
+.timer-reset{
+  animation:none;
+}
+
+.timer-animate{
+  animation:countdownRing 5s linear forwards;
+}
+
+@keyframes countdownRing{
+  from{
+    stroke-dashoffset:0;
+  }
+  to{
+    stroke-dashoffset:100.53;
+  }
+}
+
 /* PDF VIEWER */
 
 .pdfViewer{
@@ -238,7 +240,6 @@ footer{
   border-radius:12px;
   max-width:1400px;
   margin:20px auto 0 auto;
-
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -272,23 +273,25 @@ footer p{
   margin:0;
   font-weight:500;
 }
+
 /* MOBILE */
 
 @media only screen and (max-width:600px){
-.w3-row-padding{
-  padding-left:8px;
-  padding-right:8px;
-}
+  .w3-row-padding{
+    padding-left:8px;
+    padding-right:8px;
+  }
 
-.w3-row-padding > .w3-third,
-.w3-row-padding > .w3-twothird{
-  margin-bottom:12px;
-}
+  .w3-row-padding > .w3-third,
+  .w3-row-padding > .w3-twothird{
+    margin-bottom:12px;
+  }
 
-.w3-card,
-.w3-card-4{
-  margin-bottom:12px;
-}
+  .w3-card,
+  .w3-card-4{
+    margin-bottom:12px;
+  }
+
   body{
     padding-top:120px;
   }
@@ -376,168 +379,170 @@ footer p{
 </div>
 
 <div class="w3-content w3-margin-top" style="max-width:1400px">
-<div class="w3-row-padding">
+  <div class="w3-row-padding">
 
-<div class="w3-third">
-<div class="w3-white w3-text-grey w3-card-4">
+    <div class="w3-third">
+      <div class="w3-white w3-text-grey w3-card-4">
 
-<img src="https://BriEspinosa.github.io/New%20Profile%20Picture.jpeg">
+        <img src="https://BriEspinosa.github.io/New%20Profile%20Picture.jpeg">
 
-<div class="w3-container">
+        <div class="w3-container">
 
-<p><i class="fa fa-briefcase w3-margin-right"></i>Architectural Designer</p>
-<p><i class="fa fa-home w3-margin-right"></i>Riverview, Florida</p>
-<p><i class="fa fa-envelope w3-margin-right"></i>Brian.Angel.Espinosa@gmail.com</p>
-<p><i class="fa fa-phone w3-margin-right"></i>(813) 786 - 0186</p>
+          <p><i class="fa fa-briefcase w3-margin-right"></i>Architectural Designer</p>
+          <p><i class="fa fa-home w3-margin-right"></i>Riverview, Florida</p>
+          <p><i class="fa fa-envelope w3-margin-right"></i>Brian.Angel.Espinosa@gmail.com</p>
+          <p><i class="fa fa-phone w3-margin-right"></i>(813) 786 - 0186</p>
 
-<hr>
+          <hr>
 
-<p class="w3-large"><b>Proficiencies</b></p>
+          <p class="w3-large"><b>Proficiencies</b></p>
 
-<div class="software-skill"><img class="software-icon" src="https://img.icons8.com/color/48/autocad.png"><span>AutoCAD</span></div>
-<div class="software-skill"><img class="software-icon" src="https://img.icons8.com/color/48/adobe-illustrator.png"><span>Illustrator</span></div>
-<div class="software-skill"><img class="software-icon" src="https://img.icons8.com/color/48/adobe-indesign.png"><span>Indesign</span></div>
-<div class="software-skill"><img class="software-icon" src="https://img.icons8.com/color/48/lumion.png"><span>Lumion</span></div>
-<div class="software-skill"><img class="software-icon" src="https://img.icons8.com/color/48/adobe-photoshop.png"><span>Photoshop</span></div>
-<div class="software-skill">
-  <img class="software-icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/autodesk-revit-icon.png" alt="Revit icon">
-  <span>Revit</span>
-</div>
+          <div class="software-skill"><img class="software-icon" src="https://img.icons8.com/color/48/autocad.png"><span>AutoCAD</span></div>
+          <div class="software-skill"><img class="software-icon" src="https://img.icons8.com/color/48/adobe-illustrator.png"><span>Illustrator</span></div>
+          <div class="software-skill"><img class="software-icon" src="https://img.icons8.com/color/48/adobe-indesign.png"><span>Indesign</span></div>
+          <div class="software-skill"><img class="software-icon" src="https://img.icons8.com/color/48/lumion.png"><span>Lumion</span></div>
+          <div class="software-skill"><img class="software-icon" src="https://img.icons8.com/color/48/adobe-photoshop.png"><span>Photoshop</span></div>
 
-<div class="software-skill">
-  <img class="software-icon" src="https://img.icons8.com/?size=48&id=80480&format=png" alt="Rhino icon">
-  <span>Rhino</span>
-</div>
+          <div class="software-skill">
+            <img class="software-icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/autodesk-revit-icon.png" alt="Revit icon">
+            <span>Revit</span>
+          </div>
 
-<div class="software-skill">
-  <img class="software-icon" src="https://www.svgrepo.com/show/473788/sketchup.svg" alt="SketchUp icon">
-  <span>SketchUp</span>
-</div>
+          <div class="software-skill">
+            <img class="software-icon" src="https://img.icons8.com/?size=48&id=80480&format=png" alt="Rhino icon">
+            <span>Rhino</span>
+          </div>
 
-<hr>
+          <div class="software-skill">
+            <img class="software-icon" src="https://www.svgrepo.com/show/473788/sketchup.svg" alt="SketchUp icon">
+            <span>SketchUp</span>
+          </div>
+
+          <hr>
 
           <p class="w3-large"><b>Photo Slideshow</b></p>
 
-<div class="slideshow-wrapper">
+          <div class="slideshow-wrapper" id="slideshowWrapper">
 
-  <div class="slide-timer">
-    <svg viewBox="0 0 40 40">
-      <circle class="timer-bg" cx="20" cy="20" r="16"></circle>
-      <circle id="timerProgress" class="timer-progress timer-animate" cx="20" cy="20" r="16"></circle>
-    </svg>
-  </div>
+            <div class="slide-timer">
+              <svg viewBox="0 0 40 40">
+                <circle class="timer-bg" cx="20" cy="20" r="16"></circle>
+                <circle id="timerProgress" class="timer-progress timer-animate" cx="20" cy="20" r="16"></circle>
+              </svg>
+            </div>
   
-<div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Sockhop.jpeg">
-            <p>Attended the Cinderella ball hosted by Pasco Schools and this years theme was Sock hop!</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Sockhop.jpeg">
+              <p>Attended the Cinderella ball hosted by Pasco Schools and this years theme was Sock hop!</p>
+            </div>
         
-  <div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Topping%20Out.jpeg">
-            <p>Being able to sign my name and be a part of history for this topping out ceremony at Gulf Middle School.</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Topping%20Out.jpeg">
+              <p>Being able to sign my name and be a part of history for this topping out ceremony at Gulf Middle School.</p>
+            </div>
   
-  <div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Cliffs.jpeg">
-            <p>I had the great fortune of exploring the Cliffs of Moher in Ireland, some breath taking stuff!</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Cliffs.jpeg">
+              <p>I had the great fortune of exploring the Cliffs of Moher in Ireland, some breath taking stuff!</p>
+            </div>
   
-  <div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/castle.jpeg">
-            <p>Keeping up with the Royalty, Scotland edition! as we get to see the Edinburgh Castle.</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/castle.jpeg">
+              <p>Keeping up with the Royalty, Scotland edition! as we get to see the Edinburgh Castle.</p>
+            </div>
   
-    <div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Stonehenge.jpeg">
-            <p>Got to see some cool rocks at the Stonehenge!</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Stonehenge.jpeg">
+              <p>Got to see some cool rocks at the Stonehenge!</p>
+            </div>
 
-<div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Halloween.jpeg">
-            <p>Our first Halloween as homeowners! This is us attempting to put lights up!</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Halloween.jpeg">
+              <p>Our first Halloween as homeowners! This is us attempting to put lights up!</p>
+            </div>
 
-  <div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Revit%20Cat.jpeg">
-            <p>My cat Elmer showing me how to use Revit functions!</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Revit%20Cat.jpeg">
+              <p>My cat Elmer showing me how to use Revit functions!</p>
+            </div>
 
- <div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Christmas%20Cat.jpeg">
-            <p>Our first Christmas as homeowners! even though it didnt look that tall, it was scary going up on that ladder!</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Christmas%20Cat.jpeg">
+              <p>Our first Christmas as homeowners! even though it didnt look that tall, it was scary going up on that ladder!</p>
+            </div>
 
-<div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Scary%20Cat.jpeg">
-            <p>Elmer looking at me like I am his next prey!</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Scary%20Cat.jpeg">
+              <p>Elmer looking at me like I am his next prey!</p>
+            </div>
 
-  <div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Two%20Loves.jpeg">
-            <p>My two favorites taking a picture together!</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Two%20Loves.jpeg">
+              <p>My two favorites taking a picture together!</p>
+            </div>
 
-   <div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Crazy%20Cat.jpeg">
-            <p>Elmer didnt even need catnip for this one! Hes naturally wild.</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Crazy%20Cat.jpeg">
+              <p>Elmer didnt even need catnip for this one! Hes naturally wild.</p>
+            </div>
   
-          <div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Washington%20DC.jpg">
-            <p>Exploring Washington DC and seeing the cherry blossoms bloom.</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Washington%20DC.jpg">
+              <p>Exploring Washington DC and seeing the cherry blossoms bloom.</p>
+            </div>
 
-          <div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Wedding.jpg">
-            <p>Getting to experience a friends big wedding day event!</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Wedding.jpg">
+              <p>Getting to experience a friends big wedding day event!</p>
+            </div>
 
-          <div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Open%20House.jpg">
-            <p>Modeling next to my model at the USF open house!</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Open%20House.jpg">
+              <p>Modeling next to my model at the USF open house!</p>
+            </div>
 
-          <div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Graduation.jpg">
-            <p>Graduating with close friends!</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Graduation.jpg">
+              <p>Graduating with close friends!</p>
+            </div>
 
-          <div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Adventure.jpg">
-            <p>Experiencing new adventures!</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Adventure.jpg">
+              <p>Experiencing new adventures!</p>
+            </div>
 
-          <div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Bee%20Extraction%20Example.jpg">
-            <p>Extracting a feral beehive inside a water meter.</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Bee%20Extraction%20Example.jpg">
+              <p>Extracting a feral beehive inside a water meter.</p>
+            </div>
 
-          <div class="w3-display-container myPersonalPicturesSlides">
-            <img src="https://BriEspinosa.github.io/Bee%20Frame.jpg">
-            <p>A beehive frame with workers and honeycomb.</p>
-          </div>
+            <div class="w3-display-container myPersonalPicturesSlides">
+              <img src="https://BriEspinosa.github.io/Bee%20Frame.jpg">
+              <p>A beehive frame with workers and honeycomb.</p>
+            </div>
 
-          <div class="w3-center" style="margin-top:12px">
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(1)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(2)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(3)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(4)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(5)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(6)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(7)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(8)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(9)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(10)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(11)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(12)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(13)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(14)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(15)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(16)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(17)"></span>
-            <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(18)"></span>
+            <div class="w3-center" style="margin-top:12px">
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(1)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(2)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(3)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(4)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(5)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(6)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(7)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(8)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(9)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(10)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(11)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(12)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(13)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(14)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(15)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(16)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(17)"></span>
+              <span class="demodotsPersonal" onclick="currentPersonalPicturesDiv(18)"></span>
+            </div>
+
           </div>
-</div>
         </div>
       </div>
     </div>
@@ -660,7 +665,7 @@ function resetTimerAnimation(){
   timer.classList.remove("timer-animate");
   timer.classList.add("timer-reset");
 
-  void timer.offsetWidth; // forces reflow so animation restarts cleanly
+  void timer.offsetWidth;
 
   timer.classList.remove("timer-reset");
   timer.classList.add("timer-animate");
@@ -673,7 +678,6 @@ function currentPersonalPicturesDiv(n){
 }
 
 function showSlides(n){
-
   let i;
   let slides = document.getElementsByClassName("myPersonalPicturesSlides");
   let dots = document.getElementsByClassName("demodotsPersonal");
@@ -693,6 +697,78 @@ function showSlides(n){
   dots[slideIndex - 1].className += " w3-white";
 }
 
+/* TOUCH SWIPE */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+const slideshowWrapper = document.getElementById("slideshowWrapper");
+
+if(slideshowWrapper){
+  slideshowWrapper.addEventListener("touchstart", function(e){
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive:true });
+
+  slideshowWrapper.addEventListener("touchend", function(e){
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, { passive:true });
+}
+
+function handleSwipe(){
+  const swipeDistance = touchEndX - touchStartX;
+
+  if(Math.abs(swipeDistance) < 50) return;
+
+  if(swipeDistance < 0){
+    slideIndex++;
+  }else{
+    slideIndex--;
+  }
+
+  showSlides(slideIndex);
+  startSlideshow();
+}
+
+/* MOUSE DRAG SWIPE */
+
+let mouseStartX = 0;
+let mouseEndX = 0;
+let isDragging = false;
+
+if(slideshowWrapper){
+  slideshowWrapper.addEventListener("mousedown", function(e){
+    isDragging = true;
+    mouseStartX = e.screenX;
+  });
+
+  slideshowWrapper.addEventListener("mouseup", function(e){
+    if(!isDragging) return;
+    mouseEndX = e.screenX;
+    isDragging = false;
+    handleMouseSwipe();
+  });
+
+  slideshowWrapper.addEventListener("mouseleave", function(){
+    isDragging = false;
+  });
+}
+
+function handleMouseSwipe(){
+  const swipeDistance = mouseEndX - mouseStartX;
+
+  if(Math.abs(swipeDistance) < 50) return;
+
+  if(swipeDistance < 0){
+    slideIndex++;
+  }else{
+    slideIndex--;
+  }
+
+  showSlides(slideIndex);
+  startSlideshow();
+}
+
 function toggleMobileMenu(){
   let menu = document.getElementById("mobileMenu");
 
@@ -707,19 +783,3 @@ function toggleMobileMenu(){
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
