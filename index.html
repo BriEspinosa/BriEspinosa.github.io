@@ -199,7 +199,20 @@ footer i:hover{
 /* MOBILE */
 
 @media only screen and (max-width:600px){
+.w3-row-padding{
+  padding-left:8px;
+  padding-right:8px;
+}
 
+.w3-row-padding > .w3-third,
+.w3-row-padding > .w3-twothird{
+  margin-bottom:12px;
+}
+
+.w3-card,
+.w3-card-4{
+  margin-bottom:12px;
+}
   body{
     padding-top:120px;
   }
@@ -443,21 +456,29 @@ footer i:hover{
   </div>
 </div>
 
-<footer class="w3-container w3-center w3-margin-top">
+<footer>
 
-  <p>My Social Media Pages!</p>
+  <p>My Social Media Pages</p>
 
-  <a href="https://www.facebook.com/brian.d.espinosa">
-    <i class="fa fa-facebook-official"></i>
-  </a>
+  <div class="footer-social">
 
-  <a href="https://www.instagram.com/brian_angel_espinosa">
-    <i class="fa fa-instagram"></i>
-  </a>
+    <a href="https://www.facebook.com/brian.d.espinosa">
+      <i class="fa fa-facebook-official"></i>
+    </a>
 
-  <a href="https://www.linkedin.com/in/brian-angel-espinosa">
-    <i class="fa fa-linkedin"></i>
-  </a>
+    <a href="https://www.instagram.com/brian_angel_espinosa">
+      <i class="fa fa-instagram"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/brian-angel-espinosa">
+      <i class="fa fa-linkedin"></i>
+    </a>
+
+  </div>
+
+  <div style="width:100%;text-align:center;margin-top:8px;font-size:13px;opacity:.85;">
+    © 2026 Brian Angel Espinosa
+  </div>
 
 </footer>
 
@@ -509,6 +530,7 @@ function toggleMobileMenu(){
 
 </body>
 </html>
+
 
 
 
